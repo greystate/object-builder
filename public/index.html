@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<title>Object Builder [redux]</title>
+
+<link rel="stylesheet" href="/css/app.css?dev=0002">
+
+<script type="text/javascript" src="//use.typekit.net/hyr0bms.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+
+<section class="app">
+	<h1>Object Builder [redux]</h1>
+
+	<!-- #tminclude "/Users/chriz/Development/lib/tm-support/transform.rb"
+	#xml#="$TM_PROJECT_DIRECTORY/app/models/object.form.xml"
+	#xslt#="/Users/chriz/Development/lib/tm-support/build-form.xslt" -->
+<form autocapitalize="none" autocorrect="off">
+	<fieldset class="design">
+<legend>Design</legend>
+		<p class="textfield"><label for="name">Object name</label><input type="text" name="name" id="name" placeholder="object name"></p>
+		<p class="textfield"><label for="property">Add property</label><input type="text" name="property" id="property" placeholder="property name"></p>
+		<p class="textfield"><label for="method">Add method</label><input type="text" name="method" id="method" placeholder="method name"></p>
+		
+		<fieldset id="codelang" class="language">
+<legend>Language</legend>
+			
+		</fieldset>
+	</fieldset>
+	<div class="diagram">
+		<!-- Placeholder for Object Diagram -->
+	</div>
+</form>
+<!-- end tminclude -->
+	<pre class="output"><code>
+
+	</code></pre>
+</section>
+
+<script src="/scripts/libs.min.js?dev=0002"></script>
+<script src="/scripts/templates.min.js?dev=0002"></script>
+<script src="/scripts/app.js?dev=0002"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<object id="<%= @name.toLowerCase() %>" xmlns="http://xmlns.greystate.dk/2002/object-descriptor">
+	<name><%= @name %></name>
+	<% for prop in @properties: %>
+	<property>
+		<name><%= prop.name %></name>
+	</property>
+	<% end %>
+	<% for method in @methods: %>
+	<method>
+		<name><%= method.name %></name>
+	</method>
+	<% end %>
+</object>

@@ -1,0 +1,21 @@
+<table class="object-model">
+	<caption><%= @name || "(Name)" %></caption>
+	<tr><th>Properties</th></tr>
+	
+	<% for prop in @properties: %>
+	<tr><td>.<%= prop.name %></td></tr>
+	<% end %>
+	
+	<% if @properties.length is 0: %>
+	<tr><td>(Properties)</td></tr>
+	<% end %>
+	
+	<tr><th>Methods</th></tr>
+	<% for method in @methods: %>
+	<tr><td>.<%= method.name %>()</td></tr>
+	<% end %>
+	
+	<% if @methods.length is 0: %>
+	<tr><td>(Methods)</td></tr>
+	<% end %>
+</table>
