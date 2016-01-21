@@ -1,0 +1,14 @@
+class <%= @name %> {
+  init() {
+    // initialization
+  }
+
+  // Properties<% for prop in @properties: %>
+  var <%= prop.name %>: String?<% end %>
+
+  // Methods<% for method in @methods: %>
+  func <%= method.name %>() -> String {
+    // implementation
+  }
+<% end %>
+}

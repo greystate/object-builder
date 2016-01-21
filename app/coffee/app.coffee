@@ -3,6 +3,7 @@
 # @codekit-prepend "CoffeeScript.coffee"
 # @codekit-prepend "XML.coffee"
 # @codekit-prepend "JavaScript.coffee"
+# @codekit-prepend "Swift.coffee"
 # @codekit-prepend "Diagram.coffee"
 
 #### Utility
