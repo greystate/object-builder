@@ -1,9 +1,10 @@
-function <%= @name %>() {
+var _ = self.<%= @name %> = function() {
 // Properties<% for property in @properties: %>
 	this.<%= property.name %> = "";<% end %>
-}
+};
 
+_.prototype = {
 // Methods<% for method in @methods: %>
-<%= @name %>.prototype.<%= method.name %> = function() {
-}
+	<%= method.name %>: function() { }
 <% end %>
+}
