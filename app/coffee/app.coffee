@@ -1,13 +1,6 @@
-# @codekit-prepend "Language.coffee"
-# @codekit-prepend "ObjectDescriptor.coffee"
-# @codekit-prepend "CoffeeScript.coffee"
-# @codekit-prepend "XML.coffee"
-# @codekit-prepend "JavaScript.coffee"
-# @codekit-prepend "Swift.coffee"
-# @codekit-prepend "Diagram.coffee"
-
-#### Utility
-# `$()` and `$val()` are just utility functions for jQuery-/Zepto-style DOM stuff
+#### Utilities
+#
+# `$()` and `$val()` are simple utility functions for _jQuery-/Zepto_-style DOM stuff without importing the entire library
 window.$ = (selector) ->
 	elements = document.querySelectorAll selector
 	if elements.length is 1 then elements[0] else elements
@@ -17,10 +10,11 @@ window.$val = (fieldname) ->
 	for radio in elements
 		return radio.value if radio.checked
 
-# Global app object 
+# Global app object
 @app = window.app ? {}
 
 #### Main Controller
+#
 # Build a new `ObjectDescriptor` to hold the object being built,
 # Add the language radio buttons to the form and assign eventhandlers
 # to the input fields
@@ -44,6 +38,8 @@ class ObjectBuilderController
 		($ '#property').addEventListener "keypress", @handleKeypress, false
 		($ '#method').addEventListener "keypress", @handleKeypress, false
 	
+#### Builders
+# These methods take the value from the associated input field and calls the appropriate method on the `@currentObject`
 	setObjectName: (e) =>
 		val = e.target.value
 		return @testObject() if val is "tester"
@@ -112,3 +108,13 @@ class ObjectBuilderController
 		
 # Start everything when the page is ready
 app.controller = new ObjectBuilderController
+
+#### Includes
+
+# @codekit-prepend "Language.coffee"
+# @codekit-prepend "ObjectDescriptor.coffee"
+# @codekit-prepend "CoffeeScript.coffee"
+# @codekit-prepend "XML.coffee"
+# @codekit-prepend "JavaScript.coffee"
+# @codekit-prepend "Swift.coffee"
+# @codekit-prepend "Diagram.coffee"
