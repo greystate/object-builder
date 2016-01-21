@@ -23,9 +23,14 @@ with your own Typekit code.
 ## Development
 
 For development I use [TextMate](http://macromates.com/) and [CodeKit](http://incident57.com/codekit/) - CodeKit does
-the on-the-fly compilation of LESS, CoffeeScript and Kit files whenever I save one of those files. I also use TextMate's
-*Persistent Includes* for a couple of things - if you get to that, ping me, and I'll provide the missing file(s) and walk
-you through it :-)
+the on-the-fly compilation of LESS, CoffeeScript and Kit files, whenever I save one of those.
+
+The miscellaneous outputs (languages) are rendered using [Eco](https://github.com/sstephenson/eco#eco-embedded-coffeescript-templates) templates which are compiled with a Cake command:
+
+```bash
+> cake eco:compile
+```
+
 
 ## Credits
 

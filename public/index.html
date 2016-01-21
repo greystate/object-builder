@@ -15,26 +15,32 @@
 <section class="app">
 	<h1>Object Builder [redux]</h1>
 
-	<!-- #tminclude "/Users/chriz/Development/lib/tm-support/transform.rb"
-	#xml#="$TM_PROJECT_DIRECTORY/app/models/object.form.xml"
-	#xslt#="/Users/chriz/Development/lib/tm-support/build-form.xslt" -->
-<form autocapitalize="none" autocorrect="off">
+	<form autocapitalize="none" autocorrect="off" autocomplete="off">
 	<fieldset class="design">
-<legend>Design</legend>
-		<p class="textfield"><label for="name">Object name</label><input type="text" name="name" id="name" placeholder="object name"></p>
-		<p class="textfield"><label for="property">Add property</label><input type="text" name="property" id="property" placeholder="property name"></p>
-		<p class="textfield"><label for="method">Add method</label><input type="text" name="method" id="method" placeholder="method name"></p>
-		
+		<legend>Design</legend>
+		<p class="textfield">
+			<label for="name">Object name</label>
+			<input type="text" name="name" id="name" placeholder="object name" autocomplete="off">
+		</p>
+		<p class="textfield">
+			<label for="property">Add property</label>
+			<input type="text" name="property" id="property" placeholder="property name" autocomplete="off">
+		</p>
+		<p class="textfield">
+			<label for="method">Add method</label>
+			<input type="text" name="method" id="method" placeholder="method name" autocomplete="off">
+		</p>
+
 		<fieldset id="codelang" class="language">
-<legend>Language</legend>
-			
+			<legend>Language</legend>
+			<!-- Options are built here dynamically -->
 		</fieldset>
 	</fieldset>
 	<div class="diagram">
 		<!-- Placeholder for Object Diagram -->
 	</div>
 </form>
-<!-- end tminclude -->
+
 	<pre class="output"><code>
 
 	</code></pre>
