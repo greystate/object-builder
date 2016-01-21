@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form features="autocapitalize=none,autocorrect=off">
+<?build-form partial=form ?>
+<form features="autocapitalize=none,autocorrect=off,autocomplete=off">
 	<group label="Design" class="design">
 		<text label="Object name" id="name" hint="object name" />
 		<text label="Add property" id="property" hint="property name" />
