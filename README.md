@@ -12,9 +12,9 @@ This time with [CoffeeScript][COFFEE], [LESS][], [Kit][KIT], [Eco templates][ECO
 
 ## Installation
 
-To run the app you'll need a webserver of some sorts. I use [Pow](http://pow.cx/) because it's dead simple to setup
+To run the app you'll need a webserver of some sorts. I used to use [Pow](http://pow.cx/) because it's dead simple to setup
 on a new machine. Pow automatically serves static files in the `public` directory so once you've configured the app
-as a Pow site it should be working.
+as a Pow site it should be working. Nevertheless, since **CodeKit 2** was released, I've been using its internal web server though, since it's one less thing to worry about.
 
 I use the *Nimbus Sans Extended* font from [Typekit](http://typekit.com/) so you'll have to configure your own Typekit
 account if you want to use that. You'll need to replace the script in the `_type.kit` file (or directly in `index.html`)
