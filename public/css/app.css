@@ -267,6 +267,10 @@ form input[type="text"] {
   width: 14em;
   max-width: 50%;
 }
+form input[type="text"].invalid {
+  border-color: #ff3c00;
+  background-color: rgba(255, 60, 0, 0.25);
+}
 form p {
   margin: 0.5em 0;
 }

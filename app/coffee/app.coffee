@@ -20,6 +20,11 @@ window.$val = (fieldname) ->
 # to the input fields
 class ObjectBuilderController
 	RETURN_KEY = 13
+	validRE = ///
+		^
+		[^\s,\.()-]+
+		$
+	///
 	
 	constructor: () ->
 		@currentObject = new ObjectDescriptor
@@ -37,7 +42,20 @@ class ObjectBuilderController
 		# Assign keypress
 		($ '#property').addEventListener "keypress", @handleKeypress, false
 		($ '#method').addEventListener "keypress", @handleKeypress, false
-	
+		
+		# Light validation warning
+		for textfield in ($ 'input[type="text"]')
+			textfield.addEventListener "keyup", @validityChecker, false
+
+	validityChecker: (e) ->
+		field = e.target
+		if field.value.length is 0
+			field.classList.remove "invalid"
+		else
+			ok = validRE.test field.value
+			field.classList.toggle "invalid", not ok
+
+
 #### Builders
 # These methods take the value from the associated input field and calls the appropriate method on the `@currentObject`
 	setObjectName: (e) =>

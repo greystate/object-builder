@@ -17,6 +17,11 @@ form {
 	input[type="text"] {
 		width: 14em;
 		max-width: 50%;
+		
+		&.invalid {
+			border-color: #ff3c00;
+			background-color: fade(#ff3c00, 25%);
+		}
 	}
 	
 	p {
