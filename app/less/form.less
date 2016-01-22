@@ -15,9 +15,6 @@ form {
 	}
 
 	input[type="text"] {
-		width: 14em;
-		max-width: 50%;
-		
 		&.invalid {
 			border-color: #ff3c00;
 			background-color: fade(#ff3c00, 25%);
@@ -44,9 +41,9 @@ form {
 	
 	fieldset.language {
 		border: none;
+		
 		legend {
 			float: left;
-			margin: 0;
 			padding: 0 10px 0 0;
 			width: 7em;
 			text-align: right;
@@ -59,7 +56,6 @@ form {
 		width: 30px;
 		float: left;
 		clear: both;
-		margin-left: 8em;
 		height: 20px;
 		
 		& + label {
@@ -69,5 +65,45 @@ form {
 			width: 130px;
 		}
 	}
+	
+	.compact-width({
+		input[type="text"] {
+			width: auto;
+		}
+		
+		fieldset.language {
+			legend {
+				text-align: left;
+				padding-bottom: 1.5em;
+			}
+		}
+		
+		.textfield {
+			margin-left: 10px;
+			margin-bottom: 1em;
+			
+			label {
+				text-align: left;
+				padding-bottom: 2px;
+			}
+			
+			input[type="text"] {
+				width: auto; 
+			}
+		}
+	});
+	
+	
+	.regular-width({
+		input[type="text"] {
+			width: 14em;
+			max-width: 50%;
+		}
+		
+		input[type="radio"] {
+			margin-left: 8em;
+		}
+	});
+	
 }
 

@@ -171,7 +171,44 @@ table {
 }
 section.app {
   margin: 0 auto;
-  width: 80%;
+}
+@media only screen and (max-width: 668px) {
+  section.app {
+    margin: 1em 20px;
+  }
+  .debug section.app:before {
+    content: "Compact ↔️";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px;
+    color: #303030;
+    background: #f0e77c;
+    opacity: 0.8;
+    border-bottom-left-radius: 8px;
+    font: 10px "Monaco", monospace;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (min-width: 669px) {
+  section.app {
+    width: 80%;
+  }
+  .debug section.app:before {
+    content: "Regular ↔️";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px;
+    color: #303030;
+    background: #f0e77c;
+    opacity: 0.8;
+    border-bottom-left-radius: 8px;
+    font: 10px "Monaco", monospace;
+    text-transform: uppercase;
+  }
 }
 .design,
 .diagram {
@@ -180,8 +217,65 @@ section.app {
   -o-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
-  width: 50%;
-  float: left;
+}
+@media only screen and (min-width: 669px) {
+  .design,
+  .diagram {
+    float: left;
+  }
+  .debug .design:before,
+  .debug .diagram:before {
+    content: "Regular ↔️";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px;
+    color: #303030;
+    background: #f0e77c;
+    opacity: 0.8;
+    border-bottom-left-radius: 8px;
+    font: 10px "Monaco", monospace;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (min-width: 669px) {
+  .design {
+    width: 60%;
+  }
+  .debug .design:before {
+    content: "Regular ↔️";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px;
+    color: #303030;
+    background: #f0e77c;
+    opacity: 0.8;
+    border-bottom-left-radius: 8px;
+    font: 10px "Monaco", monospace;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (min-width: 669px) {
+  .diagram {
+    width: 40%;
+  }
+  .debug .diagram:before {
+    content: "Regular ↔️";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px;
+    color: #303030;
+    background: #f0e77c;
+    opacity: 0.8;
+    border-bottom-left-radius: 8px;
+    font: 10px "Monaco", monospace;
+    text-transform: uppercase;
+  }
 }
 .output {
   clear: both;
@@ -199,18 +293,136 @@ body {
   background: #ececec url('/images/bg_grunge_wall.png') center top repeat;
   background-size: 500px 375px;
 }
+@media only screen and (min-width: 669px) {
+  body {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+  .debug body:before {
+    content: "Regular ↔️";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px;
+    color: #303030;
+    background: #f0e77c;
+    opacity: 0.8;
+    border-bottom-left-radius: 8px;
+    font: 10px "Monaco", monospace;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 668px) {
+  body {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  .debug body:before {
+    content: "Compact ↔️";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px;
+    color: #303030;
+    background: #f0e77c;
+    opacity: 0.8;
+    border-bottom-left-radius: 8px;
+    font: 10px "Monaco", monospace;
+    text-transform: uppercase;
+  }
+}
 h1 {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
   font-weight: 900;
   color: #000050;
 }
+@media only screen and (max-width: 668px) {
+  h1 {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+  .debug h1:before {
+    content: "Compact ↔️";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px;
+    color: #303030;
+    background: #f0e77c;
+    opacity: 0.8;
+    border-bottom-left-radius: 8px;
+    font: 10px "Monaco", monospace;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (min-width: 669px) {
+  h1 {
+    font-size: 40px;
+    font-size: 4rem;
+  }
+  .debug h1:before {
+    content: "Regular ↔️";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px;
+    color: #303030;
+    background: #f0e77c;
+    opacity: 0.8;
+    border-bottom-left-radius: 8px;
+    font: 10px "Monaco", monospace;
+    text-transform: uppercase;
+  }
+}
 table.object-model {
   border: 2px solid #929292;
   font-family: "Inconsolata", "Monaco", "Courier", monospace;
-  width: 14em;
-  margin: 8px 0 20px 20px;
   border-top: none;
   background: rgba(255, 255, 255, 0.4);
+}
+@media only screen and (max-width: 668px) {
+  table.object-model {
+    width: 100%;
+    margin: 30px 0 10px;
+  }
+  .debug table.object-model:before {
+    content: "Compact ↔️";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px;
+    color: #303030;
+    background: #f0e77c;
+    opacity: 0.8;
+    border-bottom-left-radius: 8px;
+    font: 10px "Monaco", monospace;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (min-width: 669px) {
+  table.object-model {
+    width: 14em;
+    margin: 8px 0 20px 20px;
+  }
+  .debug table.object-model:before {
+    content: "Regular ↔️";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px;
+    color: #303030;
+    background: #f0e77c;
+    opacity: 0.8;
+    border-bottom-left-radius: 8px;
+    font: 10px "Monaco", monospace;
+    text-transform: uppercase;
+  }
 }
 table.object-model caption {
   font-family: "nimbus-sans-extended", sans-serif;
@@ -263,10 +475,6 @@ form fieldset.design {
 form fieldset.design legend {
   padding: 0 10px;
 }
-form input[type="text"] {
-  width: 14em;
-  max-width: 50%;
-}
 form input[type="text"].invalid {
   border-color: #ff3c00;
   background-color: rgba(255, 60, 0, 0.25);
@@ -296,7 +504,6 @@ form fieldset.language {
 }
 form fieldset.language legend {
   float: left;
-  margin: 0;
   padding: 0 10px 0 0;
   width: 7em;
   text-align: right;
@@ -307,7 +514,6 @@ form input[type="radio"] {
   width: 30px;
   float: left;
   clear: both;
-  margin-left: 8em;
   height: 20px;
 }
 form input[type="radio"] + label {
@@ -315,6 +521,63 @@ form input[type="radio"] + label {
   height: 20px;
   text-align: left;
   width: 130px;
+}
+@media only screen and (max-width: 668px) {
+  form input[type="text"] {
+    width: auto;
+  }
+  form fieldset.language legend {
+    text-align: left;
+    padding-bottom: 1.5em;
+  }
+  form .textfield {
+    margin-left: 10px;
+    margin-bottom: 1em;
+  }
+  form .textfield label {
+    text-align: left;
+    padding-bottom: 2px;
+  }
+  form .textfield input[type="text"] {
+    width: auto;
+  }
+  .debug form:before {
+    content: "Compact ↔️";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px;
+    color: #303030;
+    background: #f0e77c;
+    opacity: 0.8;
+    border-bottom-left-radius: 8px;
+    font: 10px "Monaco", monospace;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (min-width: 669px) {
+  form input[type="text"] {
+    width: 14em;
+    max-width: 50%;
+  }
+  form input[type="radio"] {
+    margin-left: 8em;
+  }
+  .debug form:before {
+    content: "Regular ↔️";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px;
+    color: #303030;
+    background: #f0e77c;
+    opacity: 0.8;
+    border-bottom-left-radius: 8px;
+    font: 10px "Monaco", monospace;
+    text-transform: uppercase;
+  }
 }
 /* http://prismjs.com/download.html?themes=prism-coy&languages=markup+css+clike+javascript+coffeescript+swift */
 /**
@@ -510,10 +773,49 @@ pre[data-line] code {
 pre .line-highlight {
   margin-top: 0;
 }
-pre,
-code {
-  font-size: 16px;
-  font-size: 1.6rem;
+@media only screen and (max-width: 668px) {
+  pre,
+  code {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+  .debug pre:before,
+  .debug code:before {
+    content: "Compact ↔️";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px;
+    color: #303030;
+    background: #f0e77c;
+    opacity: 0.8;
+    border-bottom-left-radius: 8px;
+    font: 10px "Monaco", monospace;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (min-width: 669px) {
+  pre,
+  code {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  .debug pre:before,
+  .debug code:before {
+    content: "Regular ↔️";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px;
+    color: #303030;
+    background: #f0e77c;
+    opacity: 0.8;
+    border-bottom-left-radius: 8px;
+    font: 10px "Monaco", monospace;
+    text-transform: uppercase;
+  }
 }
 pre[class*="language-"] {
   box-shadow: 0 0 6px rgba(0, 0, 20, 0.2) inset;
