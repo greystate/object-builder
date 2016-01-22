@@ -1,7 +1,13 @@
 section.app {
 	.centered;
+
+	.compact-width({
+		margin: 1em 20px;
+	});
 	
-	width: 80%;
+	.regular-width({
+		width: 80%;
+	});
 	
 }
 
@@ -9,8 +15,23 @@ section.app {
 	.borderBoxed;
 	
 	margin: 0;
-	width: 50%;
-	float: left;
+
+	.regular-width({
+		float: left;
+	});
+}
+
+.design {
+	.regular-width({
+		width: 60%;
+	});
+}
+
+.diagram {
+	.regular-width({
+		width: 40%;
+	});
+	
 }
 
 .output {
