@@ -1,1 +1,4 @@
 docs/
+public/scripts/app-ck-source-map-reference.coffee
+
+public/scripts/app.js.map
