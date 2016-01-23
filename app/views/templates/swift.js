@@ -52,7 +52,9 @@
           prop = _ref[_i];
           __out.push('\n  var ');
           __out.push(__sanitize(prop.name));
-          __out.push(': String?');
+          __out.push(': ');
+          __out.push(__sanitize(prop.type === 'default' ? "String" : prop.type === 'array' ? "[ String ]" : prop.type));
+          __out.push('?');
         }
       
         __out.push('\n\n  // Methods');
@@ -62,7 +64,7 @@
           method = _ref1[_j];
           __out.push('\n  func ');
           __out.push(__sanitize(method.name));
-          __out.push('() -> String {\n    // implementation\n  }\n');
+          __out.push('() -> Void {\n    // implementation\n  }\n');
         }
       
         __out.push('\n}\n');

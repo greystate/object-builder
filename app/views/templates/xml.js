@@ -54,7 +54,11 @@
         _ref = this.properties;
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           prop = _ref[_i];
-          __out.push('\n\t<property>\n\t\t<name>');
+          __out.push('\n\t<property');
+          if ((prop.type != null) && prop.type !== 'default') {
+            __out.push(" type=\"" + prop.type + "\"");
+          }
+          __out.push('>\n\t\t<name>');
           __out.push(__sanitize(prop.name));
           __out.push('</name>\n\t</property>\n\t');
         }
