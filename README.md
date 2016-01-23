@@ -1,12 +1,14 @@
 #  Object Builder [ReDuX]
 
-This is a complete rebuild of a [tool][OBJBUILDER1] I built many *centenniae* ago.
+This is a complete rebuild of an [old tool][OBJBUILDER1] I built many *centenniae* ago.
 This time with [CoffeeScript][COFFEE], [LESS][], [Kit][KIT], [Eco templates][ECO] and [PrismJS][PRISM].
 
+The [online version][OBJBUILDERRDX] is up there as well; it looks something like this:
 
 ![Screenshot of Object Builder ReDuX](app-screenshot.png)
 
 [OBJBUILDER1]: http://greystate.dk/resources/objectbuilder/
+[OBJBUILDERRDX]: http://greystate.dk/resources/objredux/
 [COFFEE]: http://coffeescript.org/
 [LESS]: http://lesscss.org/
 [KIT]: http://incident57.com/codekit/kit.php
