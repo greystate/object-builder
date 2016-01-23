@@ -3,6 +3,9 @@
 This is a complete rebuild of a [tool][OBJBUILDER1] I built many *centenniae* ago.
 This time with [CoffeeScript][COFFEE], [LESS][], [Kit][KIT], [Eco templates][ECO] and [PrismJS][PRISM].
 
+
+![Screenshot of Object Builder ReDuX](app-screenshot.png)
+
 [OBJBUILDER1]: http://greystate.dk/resources/objectbuilder/
 [COFFEE]: http://coffeescript.org/
 [LESS]: http://lesscss.org/
