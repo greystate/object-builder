@@ -41,31 +41,31 @@
       (function() {
         var method, property, _i, _j, _len, _len1, _ref, _ref1;
       
-        __out.push('var _ = self.');
+        __out.push('(function() {\n\tvar _ = self.');
       
         __out.push(__sanitize(this.name));
       
-        __out.push(' = function() {\n// Properties');
+        __out.push(' = function() {\n\t\t// Properties');
       
         _ref = this.properties;
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           property = _ref[_i];
-          __out.push('\n\tthis.');
+          __out.push('\n\t\tthis.');
           __out.push(__sanitize(property.name));
           __out.push(' = "";');
         }
       
-        __out.push('\n};\n\n_.prototype = {\n// Methods');
+        __out.push('\n\t};\n\n\t_.prototype = {\n\t\t// Methods');
       
         _ref1 = this.methods;
         for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
           method = _ref1[_j];
-          __out.push('\n\t');
+          __out.push('\n\t\t');
           __out.push(__sanitize(method.name));
-          __out.push(': function() { }\n');
+          __out.push(': function() { }\n\t');
         }
       
-        __out.push('\n}\n');
+        __out.push('\n\t}\n});\n');
       
       }).call(this);
       
