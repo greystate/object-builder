@@ -36,6 +36,11 @@ The miscellaneous outputs (languages) are rendered using [Eco](https://github.co
 > cake eco:compile
 ```
 
+## Todo
+
+- [ ] Add a **Copy Code** button to the output
+- [ ] Add a way to save an object and create others
+
 
 ## Credits
 
