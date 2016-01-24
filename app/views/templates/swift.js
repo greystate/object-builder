@@ -53,7 +53,7 @@
           __out.push('\n  var ');
           __out.push(__sanitize(prop.name));
           __out.push(': ');
-          __out.push(__sanitize(prop.type === 'default' ? "String" : prop.type === 'array' ? "[ String ]" : prop.type));
+          __out.push(__sanitize(this.nameForType(prop.type)));
           __out.push('?');
         }
       

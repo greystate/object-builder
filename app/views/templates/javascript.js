@@ -52,7 +52,9 @@
           property = _ref[_i];
           __out.push('\n\t\tthis.');
           __out.push(__sanitize(property.name));
-          __out.push(' = "";');
+          __out.push(' = ');
+          __out.push(this.nameForType(property.type));
+          __out.push(';');
         }
       
         __out.push('\n\t};\n\n\t_.prototype = {\n\t\t// Methods');

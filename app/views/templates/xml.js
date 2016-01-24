@@ -56,7 +56,9 @@
           prop = _ref[_i];
           __out.push('\n\t<property');
           if ((prop.type != null) && prop.type !== 'default') {
-            __out.push(" type=\"" + prop.type + "\"");
+            __out.push(' type="');
+            __out.push(this.nameForType(prop.type));
+            __out.push('"');
           }
           __out.push('>\n\t\t<name>');
           __out.push(__sanitize(prop.name));
