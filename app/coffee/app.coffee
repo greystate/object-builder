@@ -103,12 +103,15 @@ class ObjectBuilderController
 		($ '#name').focus()
 	
 	testObject: () ->
-		@currentObject = new ObjectDescriptor "Language"
+		@currentObject = new ObjectDescriptor "ObjectDescriptor"
 		
-		@currentObject.addMethod "renderInterface"
-		@currentObject.addMethod "renderHTML"
-		@currentObject.addProperty "name"
-		@currentObject.addProperty "title"
+		@currentObject.addMethod "addMethod"
+		@currentObject.addMethod "addProperty"
+		@currentObject.addMethod "clone"
+		
+		@currentObject.addProperty "memberlist"
+		@currentObject.addProperty "methods[]"
+		@currentObject.addProperty "properties[]"
 		@changed()
 	
 	renderCode: (object, language) ->
