@@ -13,9 +13,15 @@ class ObjectDescriptor
 		typeTest = naming.split ":"
 		name = typeTest[0]
 		type = typeTest[1] ? 'default'
+		if naming.substr(naming.length - 1) is "?"
+			name = naming.substring 0 , naming.length - 1
+			type = 'boolean'
 		if naming.match /\[\]$/
 			name = naming.substring 0, naming.length - 2
 			type = 'array'
+		if naming.match /\{\}$/
+			name = naming.substring 0, naming.length - 2
+			type = 'dictionary'
 		
 		if not @memberList["p$#{name}"]
 			@properties.push { name, type }
