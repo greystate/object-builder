@@ -65,7 +65,7 @@
           __out.push(': function() { }\n\t');
         }
       
-        __out.push('\n\t}\n});\n');
+        __out.push('\n\t}\n})();\n');
       
       }).call(this);
       

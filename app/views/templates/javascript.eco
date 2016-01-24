@@ -9,4 +9,4 @@
 		<%= method.name %>: function() { }
 	<% end %>
 	}
-});
+})();
