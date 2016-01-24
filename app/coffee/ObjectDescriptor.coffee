@@ -9,20 +9,8 @@ class ObjectDescriptor
 			@methods.push { name }
 			@memberList["m$#{name}"] = on
 	
-	addProperty: (naming) ->
-		typeTest = naming.split ":"
-		name = typeTest[0]
-		type = typeTest[1] ? 'default'
-		if naming.substr(naming.length - 1) is "?"
-			name = naming.substring 0 , naming.length - 1
-			type = 'boolean'
-		if naming.match /\[\]$/
-			name = naming.substring 0, naming.length - 2
-			type = 'array'
-		if naming.match /\{\}$/
-			name = naming.substring 0, naming.length - 2
-			type = 'dictionary'
-		
+	addProperty: (nameSpec) ->
+		{ name, type } = extractNameAndType nameSpec
 		if not @memberList["p$#{name}"]
 			@properties.push { name, type }
 			@memberList["p$#{name}"] = on
@@ -32,3 +20,36 @@ class ObjectDescriptor
 		cloned.addMethod meth.name for meth in @methods
 		cloned.addProperty "#{prop.name}:#{prop.type}" for prop in @properties
 		cloned
+		
+	# Parse the name of a property to get its name (and optionally its type too)
+	#
+	#		name          # => default
+	#		name?         # => boolean
+	#		name[]        # => array
+	#		name{}        # => dictionary
+	#		name:int      # => integer
+	#		name:integer  # => integer
+	#		name:double   # => double
+	
+	extractNameAndType = (naming) ->
+		len = naming.length
+		typeTest = naming.split ":"
+		name = typeTest[0]
+		type = typeTest[1] ? 'default'
+		
+		if type is 'int' then type = 'integer'
+		
+		if naming.substr(naming.length - 1) is "?"
+			name = naming.substring 0, len - 1
+			type = 'boolean'
+		
+		if naming.match /\[\]$/
+			name = naming.substring 0, len - 2
+			type = 'array'
+		
+		if naming.match /\{\}$/
+			name = naming.substring 0, len - 2
+			type = 'dictionary'
+		
+		{ name, type }
+		
