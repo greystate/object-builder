@@ -109,7 +109,7 @@ class ObjectBuilderController
 		@currentObject.addMethod "addProperty"
 		@currentObject.addMethod "clone"
 		
-		@currentObject.addProperty "memberlist"
+		@currentObject.addProperty "memberlist{}"
 		@currentObject.addProperty "methods[]"
 		@currentObject.addProperty "properties[]"
 		@changed()
