@@ -28,6 +28,7 @@ class ObjectBuilderController
 	
 	constructor: () ->
 		@currentObject = new ObjectDescriptor
+		@library = []
 		@addLanguagesToForm()
 		@assignHandlers()
 		@setFocusAndPickDefaultLanguage()
@@ -42,6 +43,9 @@ class ObjectBuilderController
 		# Assign keypress
 		($ '#property').addEventListener "keypress", @handleKeypress, false
 		($ '#method').addEventListener "keypress", @handleKeypress, false
+		
+		# Hook up the Save button
+		($ '#save').addEventListener "click", @saveCurrentObjectToLibrary, false
 		
 		# Light validation warning
 		for textfield in ($ 'input[type="text"]')
@@ -81,6 +85,12 @@ class ObjectBuilderController
 				"<p class=\"radiofield\"><input type=\"radio\" value=\"#{name}\" name=\"codelang\" id=\"codelang-#{++index}\"><label for=\"codelang-#{index}\">#{name}</label></p>"
 		($ ".language").innerHTML += radios.join "\n"
 	
+	saveCurrentObjectToLibrary: (e) =>
+		e.preventDefault()
+		@library.push @currentObject.clone()
+		@renderLibrary()
+		# @reset()
+	
 	testObject: () ->
 		@currentObject = new ObjectDescriptor "Language"
 		
@@ -104,7 +114,12 @@ class ObjectBuilderController
 		
 		diagramWindow = $ '.diagram'
 		diagramWindow.innerHTML = code
-		
+	
+	renderLibrary: ->
+		($ '.library').innerHTML = ""
+		for object in @library
+			@renderSavedObject object
+	
 	renderSavedObject: (object) ->
 		presenter = app.Languages.Diagram
 		code = presenter.renderInterface object
