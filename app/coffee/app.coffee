@@ -78,6 +78,11 @@ class ObjectBuilderController
 		@currentObject.addMethod val
 		@changed()
 	
+	reset: ->
+		@currentObject = new ObjectDescriptor
+		@changed()
+		@resetForm()
+	
 	addLanguagesToForm: () ->
 		index = 0
 		radios = for name, language of app.Languages
@@ -89,7 +94,13 @@ class ObjectBuilderController
 		e.preventDefault()
 		@library.push @currentObject.clone()
 		@renderLibrary()
-		# @reset()
+		@reset()
+	
+	resetForm: ->
+		($ '#name').value = ""
+		($ '#property').value = ""
+		($ '#method').value = ""
+		($ '#name').focus()
 	
 	testObject: () ->
 		@currentObject = new ObjectDescriptor "Language"
