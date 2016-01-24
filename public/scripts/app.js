@@ -1,2 +1,371 @@
-(function(){var e,t,n,r,a,i,o,s,u,c,d=function(e,t){function n(){this.constructor=e}for(var r in t)p.call(t,r)&&(e[r]=t[r]);return n.prototype=t.prototype,e.prototype=new n,e.__super__=t.prototype,e},p={}.hasOwnProperty,h=function(e,t){return function(){return e.apply(t,arguments)}};this.app=null!=(u=window.app)?u:{},this.app.Languages={},r=function(){function e(e,t){var n,r;this.name=e,null==t&&(t={}),this.template=null!=(n=t.template)?n:this.name.toLowerCase(),this.prism=null!=(r=t.prism)?r:this.name.toLowerCase(),app.Languages[this.name]=this}return e.prototype.renderInterface=function(e){return ecoTemplates[this.template](e)},e}(),i=function(){function e(e){this.name=e,this.methods=[],this.properties=[]}var t;return t={},e.prototype.addMethod=function(e){return t["m$"+e]?void 0:(this.methods.push({name:e}),t["m$"+e]=!0)},e.prototype.addProperty=function(e){var n,r,a,i;return i=e.split(":"),n=i[0],a=null!=(r=i[1])?r:"default",e.match(/\[\]$/)&&(n=e.substring(0,e.length-2),a="array"),t["p$"+n]?void 0:(this.properties.push({name:n,type:a}),t["p$"+n]=!0)},e}(),e=function(e){function t(){t.__super__.constructor.call(this,"CoffeeScript",{template:"coffee"})}return d(t,e),t}(r),new e,s=function(e){function t(){t.__super__.constructor.call(this,"XML",{prism:"markup"})}return d(t,e),t}(r),new s,n=function(e){function t(){t.__super__.constructor.call(this,"JavaScript")}return d(t,e),t}(r),new n,o=function(e){function t(){t.__super__.constructor.call(this,"Swift",{template:"swift",prism:"swift"})}return d(t,e),t}(r),new o,t=function(e){function t(){t.__super__.constructor.call(this,"Diagram")}return d(t,e),t}(r),new t,window.$=function(e){var t;return t=document.querySelectorAll(e),1===t.length?t[0]:t},window.$val=function(e){var t,n,r,a;for(t=$("[name='"+e+"']"),n=0,r=t.length;r>n;n++)if(a=t[n],a.checked)return a.value},this.app=null!=(c=window.app)?c:{},a=function(){function e(){this.handleKeypress=h(this.handleKeypress,this),this.addMethod=h(this.addMethod,this),this.addProperty=h(this.addProperty,this),this.setObjectName=h(this.setObjectName,this),this.currentObject=new i,this.addLanguagesToForm(),this.assignHandlers(),this.setFocusAndPickDefaultLanguage()}var t,n;return t=13,n=/^[^\s,\.()-]+$/,e.prototype.assignHandlers=function(){var e,t,n,r,a,i,o,s,u;for($("#name").addEventListener("change",this.setObjectName,!1),$("#property").addEventListener("change",this.addProperty,!1),$("#method").addEventListener("change",this.addMethod,!1),i=$("[name='codelang']"),e=0,n=i.length;n>e;e++)a=i[e],a.addEventListener("change",function(e){return function(){return e.changed()}}(this),!1);for($("#property").addEventListener("keypress",this.handleKeypress,!1),$("#method").addEventListener("keypress",this.handleKeypress,!1),o=$('input[type="text"]'),s=[],t=0,r=o.length;r>t;t++)u=o[t],s.push(u.addEventListener("keyup",this.validityChecker,!1));return s},e.prototype.validityChecker=function(e){var t,r;return t=e.target,0===t.value.length?t.classList.remove("invalid"):(r=n.test(t.value),t.classList.toggle("invalid",!r))},e.prototype.setObjectName=function(e){var t;return t=e.target.value,"tester"===t?this.testObject():(this.currentObject.name=t,this.changed())},e.prototype.addProperty=function(e){var t;return t=e.target.value,this.currentObject.addProperty(t),this.changed()},e.prototype.addMethod=function(e){var t;return t=e.target.value,this.currentObject.addMethod(t),this.changed()},e.prototype.addLanguagesToForm=function(){var e,t,n,r;return e=0,r=function(){var r,a;r=app.Languages,a=[];for(n in r)t=r[n],"Diagram"!==n?a.push('<p class="radiofield"><input type="radio" value="'+n+'" name="codelang" id="codelang-'+ ++e+'"><label for="codelang-'+e+'">'+n+"</label></p>"):a.push(void 0);return a}(),$(".language").innerHTML+=r.join("\n")},e.prototype.testObject=function(){return this.currentObject=new i("Language"),this.currentObject.addMethod("renderInterface"),this.currentObject.addMethod("renderHTML"),this.currentObject.addProperty("name"),this.currentObject.addProperty("title"),this.changed()},e.prototype.renderCode=function(e,t){var n,r,a;return a=app.Languages[t],r=a.renderInterface(e),n=$(".output code"),n.innerText=r,n.className="language-"+a.prism},e.prototype.renderObject=function(e){var t,n,r;return r=app.Languages.Diagram,t=r.renderInterface(e),n=$(".diagram"),n.innerHTML=t},e.prototype.renderSavedObject=function(e){var t,n,r,a;return n=app.Languages.Diagram,t=n.renderInterface(e),a=$(".library"),r=document.createElement("div"),r.classList.add("diagram-saved"),r.innerHTML=t,a.appendChild(r)},e.prototype.changed=function(){var e;return e=$val("codelang"),this.renderObject(this.currentObject),this.renderCode(this.currentObject,e),Prism.highlightAll()},e.prototype.handleKeypress=function(e){var n,r;return r=e.target,n=e.keyCode,n===t?r.select():void 0},e.prototype.setFocusAndPickDefaultLanguage=function(){return $("#codelang-1").checked=!0,$("#name").focus(),$("#name").select(),this.changed()},e}(),app.controller=new a}).call(this);
-//# sourceMappingURL=./app.js.map
+// Generated by CoffeeScript 1.10.0
+(function() {
+  var CoffeeScript, Diagram, JavaScript, Language, ObjectBuilderController, ObjectDescriptor, Swift, XML, ref, ref1,
+    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+    hasProp = {}.hasOwnProperty,
+    bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+
+  this.app = (ref = window.app) != null ? ref : {};
+
+  this.app.Languages = {};
+
+  Language = (function() {
+    function Language(name1, options) {
+      var ref1, ref2;
+      this.name = name1;
+      if (options == null) {
+        options = {};
+      }
+      this.template = (ref1 = options.template) != null ? ref1 : this.name.toLowerCase();
+      this.prism = (ref2 = options.prism) != null ? ref2 : this.name.toLowerCase();
+      app.Languages[this.name] = this;
+    }
+
+    Language.prototype.renderInterface = function(object) {
+      return ecoTemplates[this.template](object);
+    };
+
+    return Language;
+
+  })();
+
+  ObjectDescriptor = (function() {
+    function ObjectDescriptor(name1) {
+      this.name = name1;
+      this.memberList = {};
+      this.methods = [];
+      this.properties = [];
+    }
+
+    ObjectDescriptor.prototype.addMethod = function(name) {
+      if (!this.memberList["m$" + name]) {
+        this.methods.push({
+          name: name
+        });
+        return this.memberList["m$" + name] = true;
+      }
+    };
+
+    ObjectDescriptor.prototype.addProperty = function(naming) {
+      var name, ref1, type, typeTest;
+      typeTest = naming.split(":");
+      name = typeTest[0];
+      type = (ref1 = typeTest[1]) != null ? ref1 : 'default';
+      if (naming.match(/\[\]$/)) {
+        name = naming.substring(0, naming.length - 2);
+        type = 'array';
+      }
+      if (!this.memberList["p$" + name]) {
+        this.properties.push({
+          name: name,
+          type: type
+        });
+        return this.memberList["p$" + name] = true;
+      }
+    };
+
+    ObjectDescriptor.prototype.clone = function() {
+      var cloned, i, j, len, len1, meth, prop, ref1, ref2;
+      cloned = new ObjectDescriptor(this.name);
+      ref1 = this.methods;
+      for (i = 0, len = ref1.length; i < len; i++) {
+        meth = ref1[i];
+        cloned.addMethod(meth.name);
+      }
+      ref2 = this.properties;
+      for (j = 0, len1 = ref2.length; j < len1; j++) {
+        prop = ref2[j];
+        cloned.addProperty(prop.name + ":" + prop.type);
+      }
+      return cloned;
+    };
+
+    return ObjectDescriptor;
+
+  })();
+
+  CoffeeScript = (function(superClass) {
+    extend(CoffeeScript, superClass);
+
+    function CoffeeScript() {
+      CoffeeScript.__super__.constructor.call(this, "CoffeeScript", {
+        template: "coffee"
+      });
+    }
+
+    return CoffeeScript;
+
+  })(Language);
+
+  new CoffeeScript;
+
+  XML = (function(superClass) {
+    extend(XML, superClass);
+
+    function XML() {
+      XML.__super__.constructor.call(this, "XML", {
+        prism: "markup"
+      });
+    }
+
+    return XML;
+
+  })(Language);
+
+  new XML;
+
+  JavaScript = (function(superClass) {
+    extend(JavaScript, superClass);
+
+    function JavaScript() {
+      JavaScript.__super__.constructor.call(this, "JavaScript");
+    }
+
+    return JavaScript;
+
+  })(Language);
+
+  new JavaScript;
+
+  Swift = (function(superClass) {
+    extend(Swift, superClass);
+
+    function Swift() {
+      Swift.__super__.constructor.call(this, "Swift", {
+        template: "swift",
+        prism: "swift"
+      });
+    }
+
+    return Swift;
+
+  })(Language);
+
+  new Swift;
+
+  Diagram = (function(superClass) {
+    extend(Diagram, superClass);
+
+    function Diagram() {
+      Diagram.__super__.constructor.call(this, "Diagram");
+    }
+
+    return Diagram;
+
+  })(Language);
+
+  new Diagram;
+
+  window.$ = function(selector) {
+    var elements;
+    elements = document.querySelectorAll(selector);
+    if (elements.length === 1) {
+      return elements[0];
+    } else {
+      return elements;
+    }
+  };
+
+  window.$val = function(fieldname) {
+    var elements, i, len, radio;
+    elements = $("[name='" + fieldname + "']");
+    for (i = 0, len = elements.length; i < len; i++) {
+      radio = elements[i];
+      if (radio.checked) {
+        return radio.value;
+      }
+    }
+  };
+
+  this.app = (ref1 = window.app) != null ? ref1 : {};
+
+  ObjectBuilderController = (function() {
+    var RETURN_KEY, validRE;
+
+    RETURN_KEY = 13;
+
+    validRE = /^[^\s,\.()-]+$/;
+
+    function ObjectBuilderController() {
+      this.handleKeypress = bind(this.handleKeypress, this);
+      this.saveCurrentObjectToLibrary = bind(this.saveCurrentObjectToLibrary, this);
+      this.addMethod = bind(this.addMethod, this);
+      this.addProperty = bind(this.addProperty, this);
+      this.setObjectName = bind(this.setObjectName, this);
+      this.currentObject = new ObjectDescriptor;
+      this.library = [];
+      this.addLanguagesToForm();
+      this.assignHandlers();
+      this.setFocusAndPickDefaultLanguage();
+    }
+
+    ObjectBuilderController.prototype.assignHandlers = function() {
+      var i, j, len, len1, radio, ref2, ref3, results, textfield;
+      ($('#name')).addEventListener("change", this.setObjectName, false);
+      ($('#property')).addEventListener("change", this.addProperty, false);
+      ($('#method')).addEventListener("change", this.addMethod, false);
+      ref2 = $("[name='codelang']");
+      for (i = 0, len = ref2.length; i < len; i++) {
+        radio = ref2[i];
+        radio.addEventListener("change", ((function(_this) {
+          return function() {
+            return _this.changed();
+          };
+        })(this)), false);
+      }
+      ($('#property')).addEventListener("keypress", this.handleKeypress, false);
+      ($('#method')).addEventListener("keypress", this.handleKeypress, false);
+      ($('#save')).addEventListener("click", this.saveCurrentObjectToLibrary, false);
+      ref3 = $('input[type="text"]');
+      results = [];
+      for (j = 0, len1 = ref3.length; j < len1; j++) {
+        textfield = ref3[j];
+        results.push(textfield.addEventListener("keyup", this.validityChecker, false));
+      }
+      return results;
+    };
+
+    ObjectBuilderController.prototype.validityChecker = function(e) {
+      var field, ok;
+      field = e.target;
+      if (field.value.length === 0) {
+        return field.classList.remove("invalid");
+      } else {
+        ok = validRE.test(field.value);
+        return field.classList.toggle("invalid", !ok);
+      }
+    };
+
+    ObjectBuilderController.prototype.setObjectName = function(e) {
+      var val;
+      val = e.target.value;
+      if (val === "tester") {
+        return this.testObject();
+      }
+      this.currentObject.name = val;
+      return this.changed();
+    };
+
+    ObjectBuilderController.prototype.addProperty = function(e) {
+      var val;
+      val = e.target.value;
+      this.currentObject.addProperty(val);
+      return this.changed();
+    };
+
+    ObjectBuilderController.prototype.addMethod = function(e) {
+      var val;
+      val = e.target.value;
+      this.currentObject.addMethod(val);
+      return this.changed();
+    };
+
+    ObjectBuilderController.prototype.addLanguagesToForm = function() {
+      var index, language, name, radios;
+      index = 0;
+      radios = (function() {
+        var ref2, results;
+        ref2 = app.Languages;
+        results = [];
+        for (name in ref2) {
+          language = ref2[name];
+          if (name !== "Diagram") {
+            results.push("<p class=\"radiofield\"><input type=\"radio\" value=\"" + name + "\" name=\"codelang\" id=\"codelang-" + (++index) + "\"><label for=\"codelang-" + index + "\">" + name + "</label></p>");
+          } else {
+            results.push(void 0);
+          }
+        }
+        return results;
+      })();
+      return ($(".language")).innerHTML += radios.join("\n");
+    };
+
+    ObjectBuilderController.prototype.saveCurrentObjectToLibrary = function(e) {
+      e.preventDefault();
+      this.library.push(this.currentObject.clone());
+      return this.renderLibrary();
+    };
+
+    ObjectBuilderController.prototype.testObject = function() {
+      this.currentObject = new ObjectDescriptor("Language");
+      this.currentObject.addMethod("renderInterface");
+      this.currentObject.addMethod("renderHTML");
+      this.currentObject.addProperty("name");
+      this.currentObject.addProperty("title");
+      return this.changed();
+    };
+
+    ObjectBuilderController.prototype.renderCode = function(object, language) {
+      var codeWindow, pre, presenter;
+      presenter = app.Languages[language];
+      pre = presenter.renderInterface(object);
+      codeWindow = $('.output code');
+      codeWindow.innerText = pre;
+      return codeWindow.className = "language-" + presenter.prism;
+    };
+
+    ObjectBuilderController.prototype.renderObject = function(object) {
+      var code, diagramWindow, presenter;
+      presenter = app.Languages.Diagram;
+      code = presenter.renderInterface(object);
+      diagramWindow = $('.diagram');
+      return diagramWindow.innerHTML = code;
+    };
+
+    ObjectBuilderController.prototype.renderLibrary = function() {
+      var i, len, object, ref2, results;
+      ($('.library')).innerHTML = "";
+      ref2 = this.library;
+      results = [];
+      for (i = 0, len = ref2.length; i < len; i++) {
+        object = ref2[i];
+        results.push(this.renderSavedObject(object));
+      }
+      return results;
+    };
+
+    ObjectBuilderController.prototype.renderSavedObject = function(object) {
+      var code, presenter, saved, savedObjectsWindow;
+      presenter = app.Languages.Diagram;
+      code = presenter.renderInterface(object);
+      savedObjectsWindow = $('.library');
+      saved = document.createElement("div");
+      saved.classList.add("diagram-saved");
+      saved.innerHTML = code;
+      return savedObjectsWindow.appendChild(saved);
+    };
+
+    ObjectBuilderController.prototype.changed = function() {
+      var lang;
+      lang = $val('codelang');
+      this.renderObject(this.currentObject);
+      this.renderCode(this.currentObject, lang);
+      return Prism.highlightAll();
+    };
+
+    ObjectBuilderController.prototype.handleKeypress = function(e) {
+      var code, input;
+      input = e.target;
+      code = e.keyCode;
+      if (code === RETURN_KEY) {
+        return input.select();
+      }
+    };
+
+    ObjectBuilderController.prototype.setFocusAndPickDefaultLanguage = function() {
+      ($('#codelang-1')).checked = true;
+      ($('#name')).focus();
+      ($('#name')).select();
+      return this.changed();
+    };
+
+    return ObjectBuilderController;
+
+  })();
+
+  app.controller = new ObjectBuilderController;
+
+}).call(this);
+
+
+//# sourceMappingURL=app.js.map
