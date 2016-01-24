@@ -104,6 +104,16 @@ class ObjectBuilderController
 		
 		diagramWindow = $ '.diagram'
 		diagramWindow.innerHTML = code
+		
+	renderSavedObject: (object) ->
+		presenter = app.Languages.Diagram
+		code = presenter.renderInterface object
+		
+		savedObjectsWindow = $ '.library'
+		saved = document.createElement "div"
+		saved.classList.add "diagram-saved"
+		saved.innerHTML = code
+		savedObjectsWindow.appendChild saved
 
 	changed: () ->
 		lang = $val('codelang')
