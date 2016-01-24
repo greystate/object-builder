@@ -4,7 +4,7 @@ class <%= @name %> {
   }
 
   // Properties<% for prop in @properties: %>
-  var <%= prop.name %>: <%= if prop.type is 'default' then "String" else if prop.type is 'array' then "[ String ]" else prop.type %>?<% end %>
+  var <%= prop.name %>: <%= @nameForType prop.type %>?<% end %>
 
   // Methods<% for method in @methods: %>
   func <%= method.name %>() -> Void {

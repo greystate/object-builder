@@ -1,7 +1,7 @@
 <object id="<%= @name.toLowerCase() %>" xmlns="http://xmlns.greystate.dk/2002/object-descriptor">
 	<name><%= @name %></name>
 	<% for prop in @properties: %>
-	<property<% if prop.type? and prop.type isnt 'default': %><%- " type=\"#{prop.type}\"" %><% end %>>
+	<property<% if prop.type? and prop.type isnt 'default': %> type="<%- @nameForType prop.type %>"<% end %>>
 		<name><%= prop.name %></name>
 	</property>
 	<% end %>

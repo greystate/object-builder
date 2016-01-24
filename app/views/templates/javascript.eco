@@ -1,7 +1,7 @@
 (function() {
 	var _ = self.<%= @name %> = function() {
 		// Properties<% for property in @properties: %>
-		this.<%= property.name %> = "";<% end %>
+		this.<%= property.name %> = <%- @nameForType property.type %>;<% end %>
 	};
 
 	_.prototype = {
