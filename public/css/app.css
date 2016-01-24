@@ -211,7 +211,8 @@ section.app {
   }
 }
 .design,
-.diagram {
+.diagram,
+.library {
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -220,11 +221,13 @@ section.app {
 }
 @media only screen and (min-width: 669px) {
   .design,
-  .diagram {
+  .diagram,
+  .library {
     float: left;
   }
   .debug .design:before,
-  .debug .diagram:before {
+  .debug .diagram:before,
+  .debug .library:before {
     content: "Regular ↔️";
     display: inline-block;
     position: absolute;
@@ -259,10 +262,12 @@ section.app {
   }
 }
 @media only screen and (min-width: 669px) {
-  .diagram {
+  .diagram,
+  .library {
     width: 40%;
   }
-  .debug .diagram:before {
+  .debug .diagram:before,
+  .debug .library:before {
     content: "Regular ↔️";
     display: inline-block;
     position: absolute;
@@ -453,6 +458,15 @@ table.object-model th {
   border-top: 2px solid #929292;
   overflow: hidden;
   padding: 2px 0;
+}
+.library table.object-model {
+  font-size: 12px;
+  font-size: 1.2rem;
+  border-width: 1px;
+}
+.library table.object-model caption,
+.library table.object-model th {
+  border-width: 1px;
 }
 form {
   margin: 0 10px 10px 0;
