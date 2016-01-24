@@ -468,6 +468,16 @@ table.object-model th {
 .library table.object-model th {
   border-width: 1px;
 }
+#library-controls {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  float: right;
+  border: none;
+}
+#library-controls legend {
+  display: none;
+}
 form {
   margin: 0 10px 10px 0;
 }
