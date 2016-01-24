@@ -15,8 +15,9 @@ class Language
 	constructor: (@name, options = {}) ->
 		@template = options.template ? @name.toLowerCase()
 		@prism = options.prism ? @name.toLowerCase()
+		@types = options.types ? 'default': 'string'
 		app.Languages[@name] = @
 
 	renderInterface: (object) ->
+		object.nameForType = (type) => @types[type] ? 'N/A'
 		ecoTemplates[@template](object)
-
