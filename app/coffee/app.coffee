@@ -41,6 +41,7 @@ class ObjectBuilderController
 		for radio in ($ "[name='codelang']")
 			radio.addEventListener "change", (() => @changed()), false
 		# Assign keypress
+		($ '#name').addEventListener "keypress", @handleKeypress, false
 		($ '#property').addEventListener "keypress", @handleKeypress, false
 		($ '#method').addEventListener "keypress", @handleKeypress, false
 		
@@ -155,7 +156,10 @@ class ObjectBuilderController
 		code = e.keyCode
 
 		if code is RETURN_KEY
-			input.select()
+			if input.id is "name"
+				($ '#property').select()
+			else
+				input.select()
 
 	setFocusAndPickDefaultLanguage: () ->
 		($ '#codelang-1').checked = true
