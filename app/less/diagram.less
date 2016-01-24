@@ -1,7 +1,7 @@
 @border_color: #929292;
 @border_setting: 2px solid @border_color;
 
-table.object-model {	
+table.object-model {
 	border: @border_setting;
 	font-family: "Inconsolata", "Monaco", "Courier", monospace;
 
@@ -44,4 +44,15 @@ table.object-model {
 		overflow: hidden;
 		padding: 2px 0;
 	}
+	
+	// Alter styles when diagram is in the library
+	.library & {
+		.font-size(12);
+		
+		border-width: 1px;
+		
+		caption, th { border-width: 1px; }
+	}
+	
+	
 }
