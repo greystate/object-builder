@@ -478,6 +478,16 @@ table.object-model th {
 .library table.object-model th {
   border-width: 1px;
 }
+.library {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.library::before {
+  font-size: 14px;
+  font-size: 1.4rem;
+  content: "Library";
+  display: block;
+  padding: 0.5em 20px;
+}
 #library-controls {
   width: -webkit-fit-content;
   width: -moz-fit-content;

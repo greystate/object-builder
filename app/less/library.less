@@ -1,5 +1,13 @@
 .library {
+	border-top: 1px solid rgba(0, 0, 0, 0.2);
 	
+	&::before {
+		.font-size(14);
+		
+		content: "Library";
+		display: block;
+		padding: 0.5em 20px;
+	}
 }
 
 #library-controls {
