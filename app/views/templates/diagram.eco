@@ -1,6 +1,6 @@
 <table class="object-model">
 	<caption><%= @name || "(Name)" %></caption>
-	<tr><th>Properties</th></tr>
+	<tr<%- if @properties.length is 0 then ' class="no-properties"' else '' %>><th>Properties</th></tr>
 	
 	<% for prop in @properties: %>
 	<tr><td>.<%= prop.name %></td></tr>
@@ -10,7 +10,7 @@
 	<tr><td>(Properties)</td></tr>
 	<% end %>
 	
-	<tr><th>Methods</th></tr>
+	<tr<%- if @methods.length is 0 then ' class="no-methods"' else '' %>><th>Methods</th></tr>
 	<% for method in @methods: %>
 	<tr><td>.<%= method.name %>()</td></tr>
 	<% end %>

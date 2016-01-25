@@ -286,6 +286,16 @@ section.app {
   clear: both;
   margin-top: 20px !important;
 }
+.footer {
+  font-size: 12px;
+  font-size: 1.2rem;
+  padding-top: 2em;
+  text-align: center;
+}
+.footer a {
+  color: inherit;
+  font-weight: bold;
+}
 html {
   font-size: 62.5%;
 }
@@ -476,6 +486,14 @@ table.object-model th {
   border: none;
 }
 #library-controls legend {
+  display: none;
+}
+.diagram-saved .no-methods,
+.diagram-saved .no-properties {
+  display: none;
+}
+.diagram-saved .no-methods + tr,
+.diagram-saved .no-properties + tr {
   display: none;
 }
 form {
