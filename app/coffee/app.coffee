@@ -28,7 +28,7 @@ class ObjectBuilderController
 	
 	constructor: () ->
 		@currentObject = new ObjectDescriptor
-		@library = []
+		@library = new Library $('.library'), app.Languages.Diagram
 		@addLanguagesToForm()
 		@assignHandlers()
 		@setFocusAndPickDefaultLanguage()
@@ -93,8 +93,7 @@ class ObjectBuilderController
 	
 	saveCurrentObjectToLibrary: (e) =>
 		e.preventDefault()
-		@library.push @currentObject.clone()
-		@renderLibrary()
+		@library.add @currentObject.clone()
 		@reset()
 	
 	resetForm: ->
@@ -130,21 +129,6 @@ class ObjectBuilderController
 		diagramWindow = $ '.diagram'
 		diagramWindow.innerHTML = code
 	
-	renderLibrary: ->
-		($ '.library').innerHTML = ""
-		for object in @library
-			@renderSavedObject object
-	
-	renderSavedObject: (object) ->
-		presenter = app.Languages.Diagram
-		code = presenter.renderInterface object
-		
-		savedObjectsWindow = $ '.library'
-		saved = document.createElement "div"
-		saved.classList.add "diagram-saved"
-		saved.innerHTML = code
-		savedObjectsWindow.appendChild saved
-
 	changed: () ->
 		lang = $val('codelang')
 		@renderObject @currentObject
@@ -179,3 +163,4 @@ app.controller = new ObjectBuilderController
 # @codekit-prepend "JavaScript.coffee"
 # @codekit-prepend "Swift.coffee"
 # @codekit-prepend "Diagram.coffee"
+# @codekit-prepend "Library.coffee"
