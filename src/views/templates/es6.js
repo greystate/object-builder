@@ -39,13 +39,13 @@
     }
     (function() {
       (function() {
-        var m, method, _i, _len, _ref;
+        var m, method, prop, _i, _j, _len, _len1, _ref, _ref1;
       
         __out.push('class ');
       
         __out.push(__sanitize(this.name));
       
-        __out.push(' {\n  constructor(');
+        __out.push(' {\n\tconstructor(');
       
         __out.push(__sanitize("" + (((function() {
           var _i, _len, _ref, _results;
@@ -59,14 +59,25 @@
           return _results;
         }).call(this)).join(', '))));
       
-        __out.push(') {\n    // implementation\n  }\n');
+        __out.push(') {');
       
-        _ref = this.methods;
+        _ref = this.properties;
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          method = _ref[_i];
-          __out.push('\n  ');
+          prop = _ref[_i];
+          __out.push('\n\t\tthis.');
+          __out.push(__sanitize(prop.name));
+          __out.push(' = ');
+          __out.push(__sanitize(prop.name));
+        }
+      
+        __out.push('\n\t}\n');
+      
+        _ref1 = this.methods;
+        for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+          method = _ref1[_j];
+          __out.push('\n\t');
           __out.push(__sanitize(method.name));
-          __out.push('() {\n    // implementation\n  }\n');
+          __out.push('() {\n\t\t// implementation\n\t}\n');
         }
       
         __out.push('\n}\n');

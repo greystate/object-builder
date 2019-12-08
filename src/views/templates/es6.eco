@@ -1,10 +1,10 @@
 class <%= @name %> {
-  constructor(<%= "#{(m.name for m in @properties).join(', ')}" %>) {
-    // implementation
-  }
+	constructor(<%= "#{(m.name for m in @properties).join(', ')}" %>) {<% for prop in @properties: %>
+		this.<%= prop.name %> = <%= prop.name %><% end %>
+	}
 <% for method in @methods: %>
-  <%= method.name %>() {
-    // implementation
-  }
+	<%= method.name %>() {
+		// implementation
+	}
 <% end %>
 }
