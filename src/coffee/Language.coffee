@@ -1,11 +1,11 @@
 # Get the global app object 
-@app = window.app ? {}
+app = self.app ? {}
 
 # Keep a lookup variable for the available languages
-@app.Languages = { }
+app.Languages = { }
 
 #### Language
-# The `Language` class is the base for languages we're oping to support,
+# The `Language` class is the base for languages we're hoping to support,
 # so that every new language supports the basic operations, `renderInterface()`
 # being the prime contender at the moment.
 # 

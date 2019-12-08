@@ -11,7 +11,7 @@ window.$val = (fieldname) ->
 		return radio.value if radio.checked
 
 # Global app object
-@app = window.app ? {}
+app = self.app ? {}
 
 #### Main Controller
 #
@@ -40,6 +40,8 @@ class ObjectBuilderController
 		($ '#method').addEventListener "change", @addMethod, false
 		for radio in ($ "[name='codelang']")
 			radio.addEventListener "change", (() => @changed()), false
+		($ ".library").addEventListener "click", @libraryClickHandler, false
+		
 		# Assign keypress
 		($ '#name').addEventListener "keypress", @handleKeypress, false
 		($ '#property').addEventListener "keypress", @handleKeypress, false
@@ -51,6 +53,18 @@ class ObjectBuilderController
 		# Light validation warning
 		for textfield in ($ 'input[type="text"]')
 			textfield.addEventListener "keyup", @validityChecker, false
+
+	libraryClickHandler: (e) =>
+		target = e.srcElement
+		needle = target
+		needle = needle.parentNode until needle.nodeName is "DIV"
+		
+		index = needle.dataset.libraryIndex
+		if index >= 0
+			@loadObjectIntoCurrentObject (@library.get index).clone()
+		
+
+		
 
 	validityChecker: (e) ->
 		field = e.target
@@ -96,6 +110,13 @@ class ObjectBuilderController
 		@library.add @currentObject.clone()
 		@reset()
 	
+	loadObjectIntoCurrentObject: (object) ->
+		@currentObject = object
+		@changed()
+		
+	removeObject: (index) ->
+		# body
+	
 	resetForm: ->
 		($ '#name').value = ""
 		($ '#property').value = ""
@@ -132,8 +153,9 @@ class ObjectBuilderController
 	changed: () ->
 		lang = $val('codelang')
 		@renderObject @currentObject
-		@renderCode @currentObject, lang
-		Prism.highlightAll()
+		if lang?
+			@renderCode @currentObject, lang
+			Prism.highlightAll()
 	
 	handleKeypress: (e) =>
 		input = e.target
@@ -161,6 +183,7 @@ app.controller = new ObjectBuilderController
 # @codekit-prepend "CoffeeScript.coffee"
 # @codekit-prepend "XML.coffee"
 # @codekit-prepend "JavaScript.coffee"
+# @codekit-prepend "ES6.coffee"
 # @codekit-prepend "Swift.coffee"
 # @codekit-prepend "Diagram.coffee"
 # @codekit-prepend "Library.coffee"

@@ -1,0 +1,9 @@
+class <%= @name %> {
+  constructor(<%= "#{(m.name for m in @properties).join(', ')}" %>) {
+    // implementation
+  }
+<% for method in @methods: %>
+  <%= method.name %>() {
+    // implementation
+  }
+<% end %>
