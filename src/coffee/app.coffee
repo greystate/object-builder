@@ -11,7 +11,7 @@ window.$val = (fieldname) ->
 		return radio.value if radio.checked
 
 # Global app object
-app = self.app ? {}
+self.app ?= {}
 
 #### Main Controller
 #
@@ -28,7 +28,7 @@ class ObjectBuilderController
 	
 	constructor: () ->
 		@currentObject = new ObjectDescriptor
-		@library = new Library $('.library'), app.Languages.Diagram
+		@library = new Library $('.library'), self.app.Languages.Diagram
 		@addLanguagesToForm()
 		@assignHandlers()
 		@setFocusAndPickDefaultLanguage()
@@ -100,7 +100,7 @@ class ObjectBuilderController
 	
 	addLanguagesToForm: () ->
 		index = 0
-		radios = for name, language of app.Languages
+		radios = for name, language of self.app.Languages
 			unless name is "Diagram"
 				"<p class=\"radiofield\"><input type=\"radio\" value=\"#{name}\" name=\"codelang\" id=\"codelang-#{++index}\"><label for=\"codelang-#{index}\">#{name}</label></p>"
 		($ ".language").innerHTML += radios.join "\n"
@@ -136,7 +136,7 @@ class ObjectBuilderController
 		@changed()
 	
 	renderCode: (object, language) ->
-		presenter = app.Languages[language]
+		presenter = self.app.Languages[language]
 		pre = presenter.renderInterface object
 
 		codeWindow = $ '.output code'
@@ -144,7 +144,7 @@ class ObjectBuilderController
 		codeWindow.className = "language-#{presenter.prism}"
 	
 	renderObject: (object) ->
-		presenter = app.Languages.Diagram
+		presenter = self.app.Languages.Diagram
 		code = presenter.renderInterface object
 		
 		diagramWindow = $ '.diagram'
@@ -174,7 +174,7 @@ class ObjectBuilderController
 		@changed()
 		
 # Start everything when the page is ready
-app.controller = new ObjectBuilderController
+self.app.controller = new ObjectBuilderController
 
 #### Includes
 

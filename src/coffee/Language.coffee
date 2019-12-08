@@ -1,8 +1,8 @@
 # Get the global app object 
-app = self.app ? {}
+self.app ?= {}
 
 # Keep a lookup variable for the available languages
-app.Languages = { }
+self.app.Languages = { }
 
 #### Language
 # The `Language` class is the base for languages we're hoping to support,
@@ -16,7 +16,7 @@ class Language
 		@template = options.template ? @name.toLowerCase()
 		@prism = options.prism ? @name.toLowerCase()
 		@types = options.types ? 'default': 'string'
-		app.Languages[@name] = @
+		self.app.Languages[@name] = @
 
 	renderInterface: (object) ->
 		object.nameForType = (type) => @types[type] ? 'N/A'
