@@ -69,7 +69,7 @@
           __out.push('() {\n    // implementation\n  }\n');
         }
       
-        __out.push('\n');
+        __out.push('\n}\n');
       
       }).call(this);
       
