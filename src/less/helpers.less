@@ -1,0 +1,53 @@
+.centered() {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.borderBoxed() {
+	box-sizing: border-box;
+}
+
+@root_px_target: 10;
+@root_size: 100% * @root_px_target/16;
+
+.font-size(@target) {
+	font-size: @target * 1px;
+	font-size: @target/@root_px_target * 1rem;
+}
+
+.text-shadow() {
+	
+}
+
+.contain() {
+	&:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+}
+
+// +++ Shadows +++
+.box-shadow(@offsetX, @offsetY, @blur, @color: rgba(0, 0, 0, 0.25)) {
+	box-shadow: @offsetX @offsetY @blur @color;
+}
+
+.box-shadow(@offsetX, @offsetY, @blur, @width, @color) {
+	box-shadow: @offsetX @offsetY @blur @width @color;
+}
+
+.box-shadow-inset(@offsetX, @offsetY, @blur, @color: rgba(0, 0, 0, 0.25)) {
+	box-shadow: @offsetX @offsetY @blur @color inset;
+}
+
+.box-shadow-inset(@offsetX, @offsetY, @blur, @width, @color) {
+	box-shadow: @offsetX @offsetY @blur @width @color inset;
+}
+
+.text-shadow(@offsetX: 0, @offsetY: 1px, @blur: 0, @color: rgba(255, 255, 255, 0.8)) {
+	text-shadow: @offsetX @offsetY @blur @color;
+}
+
+
