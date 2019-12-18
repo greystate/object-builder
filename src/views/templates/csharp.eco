@@ -1,0 +1,15 @@
+public class <%= @name %> {
+  public <%= @name %>() {
+    // initialization
+  }
+
+  // Properties<% for prop in @properties: %>
+  public <%- @nameForType prop.type %> <%= prop.name %> { get; set; }<% end %>
+
+  // Methods<% for method in @methods: %>
+  public void <%= method.name %>()
+  {
+    // implementation
+  }
+<% end %>
+}

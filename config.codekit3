@@ -100,6 +100,17 @@
 		"sC": 0,
 		"tS": 1
 		},
+	"/src/coffee/CSharp.coffee": {
+		"ft": 32,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/build/assets/CSharp.js",
+		"oF": 0,
+		"oS": 0,
+		"sC": 0,
+		"tS": 1
+		},
 	"/src/coffee/Diagram.coffee": {
 		"ft": 32,
 		"ma": 0,
@@ -519,6 +530,25 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/build/assets/coffee.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/src/views/templates/csharp.eco": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/views/templates/csharp.eco",
+		"oF": 0
+		},
+	"/src/views/templates/csharp.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/build/assets/csharp.min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0

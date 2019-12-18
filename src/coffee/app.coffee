@@ -185,5 +185,6 @@ self.app.controller = new ObjectBuilderController
 # @codekit-prepend "JavaScript.coffee"
 # @codekit-prepend "ES6.coffee"
 # @codekit-prepend "Swift.coffee"
+# @codekit-prepend "CSharp.coffee"
 # @codekit-prepend "Diagram.coffee"
 # @codekit-prepend "Library.coffee"
