@@ -7,7 +7,7 @@
 		"uuidString": "C1599349-7D84-4751-BAD4-B130FC77328C"
 		}
 	],
-"creatorBuild": "31934",
+"creatorBuild": "32001",
 "files": {
 	"/.gitignore": {
 		"cB": 0,
@@ -664,7 +664,7 @@
 	{
 		"enabled": 1,
 		"name": "Compile ECO templates",
-		"predicateDataBase64Encoded": "YnBsaXN0MDDUAQIDBAUGZWZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QFgcIDxQcJicqMTU6Oz5CRktMT1ZcYGJVJG51bGzTCQoLDA0OXxAXTlNDb21wb3VuZFByZWRpY2F0ZVR5cGVfEA9OU1N1YnByZWRpY2F0ZXNWJGNsYXNzEAKAAoAV0hALERNaTlMub2JqZWN0c6ESgAOAFNQLFRYXGBkaG18QEU5TUmlnaHRFeHByZXNzaW9uXxAQTlNMZWZ0RXhwcmVzc2lvbl8QE05TUHJlZGljYXRlT3BlcmF0b3KAE4AOgASAEdUdHh8gCyEiIyQlWU5TT3BlcmFuZF5OU1NlbGVjdG9yTmFtZV8QEE5TRXhwcmVzc2lvblR5cGVbTlNBcmd1bWVudHOABoAFEAOACIANXHZhbHVlRm9yS2V5OtIfCygpEAGAB9IrLC0uWiRjbGFzc25hbWVYJGNsYXNzZXNfEBBOU1NlbGZFeHByZXNzaW9uoy0vMFxOU0V4cHJlc3Npb25YTlNPYmplY3TSEAsyNKEzgAmADNMLHzY3ODlZTlNLZXlQYXRogAsQCoAKXWlucHV0RnVsbFBhdGjSKyw8PV8QHE5TS2V5UGF0aFNwZWNpZmllckV4cHJlc3Npb26jPC8w0issP0BeTlNNdXRhYmxlQXJyYXmjP0EwV05TQXJyYXnSKyxDRF8QE05TS2V5UGF0aEV4cHJlc3Npb26kQ0UvMF8QFE5TRnVuY3Rpb25FeHByZXNzaW9u00cfC0hJSl8QD05TQ29uc3RhbnRWYWx1ZYAPEACAEFQuZWNv0issTU5fEBlOU0NvbnN0YW50VmFsdWVFeHByZXNzaW9uo00vMNULUFFSU1RJIyhVWk5TTW9kaWZpZXJXTlNGbGFnc1pOU1Bvc2l0aW9uXk5TT3BlcmF0b3JUeXBlgBIQCdIrLFdYXxAcTlNTdWJzdHJpbmdQcmVkaWNhdGVPcGVyYXRvcqRZWlswXxAcTlNTdWJzdHJpbmdQcmVkaWNhdGVPcGVyYXRvcl8QGU5TU3RyaW5nUHJlZGljYXRlT3BlcmF0b3JfEBNOU1ByZWRpY2F0ZU9wZXJhdG9y0issXV5fEBVOU0NvbXBhcmlzb25QcmVkaWNhdGWjXV8wW05TUHJlZGljYXRl0issQWGiQTDSKyxjZF8QE05TQ29tcG91bmRQcmVkaWNhdGWjY18wXxAPTlNLZXllZEFyY2hpdmVy0WdoVHJvb3SAAQAIABEAGgAjAC0AMgA3AFAAVgBdAHcAiQCQAJIAlACWAJsApgCoAKoArAC1AMkA3ADyAPQA9gD4APoBBQEPAR4BMQE9AT8BQQFDAUUBRwFUAVkBWwFdAWIBbQF2AYkBjQGaAaMBqAGqAawBrgG1Ab8BwQHDAcUB0wHYAfcB+wIAAg8CEwIbAiACNgI7AlICWQJrAm0CbwJxAnYCewKXApsCpgKxArkCxALTAtUC1wLcAvsDAAMfAzsDUQNWA24DcgN+A4MDhgOLA6EDpQO3A7oDvwAAAAAAAAIBAAAAAAAAAGkAAAAAAAAAAAAAAAAAAAPB",
+		"predicateDataBase64Encoded": "YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBYLDBMYICorLjU5Pj9CRkpPUFNaYGRmVSRudWxs0w0ODxAREl8QF05TQ29tcG91bmRQcmVkaWNhdGVUeXBlXxAPTlNTdWJwcmVkaWNhdGVzViRjbGFzcxACgAKAFdIUDxUXWk5TLm9iamVjdHOhFoADgBTUDxkaGxwdHh9fEBFOU1JpZ2h0RXhwcmVzc2lvbl8QEE5TTGVmdEV4cHJlc3Npb25fEBNOU1ByZWRpY2F0ZU9wZXJhdG9ygBOADoAEgBHVISIjJA8lJicoKVlOU09wZXJhbmReTlNTZWxlY3Rvck5hbWVfEBBOU0V4cHJlc3Npb25UeXBlW05TQXJndW1lbnRzgAaABRADgAiADVx2YWx1ZUZvcktleTrSIw8sLRABgAfSLzAxMlokY2xhc3NuYW1lWCRjbGFzc2VzXxAQTlNTZWxmRXhwcmVzc2lvbqMxMzRcTlNFeHByZXNzaW9uWE5TT2JqZWN00hQPNjihN4AJgAzTDyM6Ozw9WU5TS2V5UGF0aIALEAqACl1pbnB1dEZ1bGxQYXRo0i8wQEFfEBxOU0tleVBhdGhTcGVjaWZpZXJFeHByZXNzaW9uo0AzNNIvMENEXk5TTXV0YWJsZUFycmF5o0NFNFdOU0FycmF50i8wR0hfEBNOU0tleVBhdGhFeHByZXNzaW9upEdJMzRfEBROU0Z1bmN0aW9uRXhwcmVzc2lvbtNLIw9MTU5fEA9OU0NvbnN0YW50VmFsdWWADxAAgBBULmVjb9IvMFFSXxAZTlNDb25zdGFudFZhbHVlRXhwcmVzc2lvbqNRMzTVD1RVVldYTScsWVpOU01vZGlmaWVyV05TRmxhZ3NaTlNQb3NpdGlvbl5OU09wZXJhdG9yVHlwZYASEAnSLzBbXF8QHE5TU3Vic3RyaW5nUHJlZGljYXRlT3BlcmF0b3KkXV5fNF8QHE5TU3Vic3RyaW5nUHJlZGljYXRlT3BlcmF0b3JfEBlOU1N0cmluZ1ByZWRpY2F0ZU9wZXJhdG9yXxATTlNQcmVkaWNhdGVPcGVyYXRvctIvMGFiXxAVTlNDb21wYXJpc29uUHJlZGljYXRlo2FjNFtOU1ByZWRpY2F0ZdIvMEVlokU00i8wZ2hfEBNOU0NvbXBvdW5kUHJlZGljYXRlo2djNAAIABEAGgAkACkAMgA3AEkATABRAFMAbAByAHkAkwClAKwArgCwALIAtwDCAMQAxgDIANEA5QD4AQ4BEAESARQBFgEhASsBOgFNAVkBWwFdAV8BYQFjAXABdQF3AXkBfgGJAZIBpQGpAbYBvwHEAcYByAHKAdEB2wHdAd8B4QHvAfQCEwIXAhwCKwIvAjcCPAJSAlcCbgJ1AocCiQKLAo0CkgKXArMCtwLCAs0C1QLgAu8C8QLzAvgDFwMcAzsDVwNtA3IDigOOA5oDnwOiA6cDvQAAAAAAAAIBAAAAAAAAAGkAAAAAAAAAAAAAAAAAAAPB",
 		"runOrder": 0,
 		"scriptSourceString": "cake eco:compile\n",
 		"scriptType": 1,
@@ -1274,6 +1274,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"grouped-accessor-pairs": {
+			"active": 0,
+			"optionString": "'anyOrder'"
+			},
 		"guard-for-in": {
 			"active": 0,
 			"optionString": ""
@@ -1450,6 +1454,10 @@
 			"active": 1,
 			"optionString": "{'checkLoops': true}"
 			},
+		"no-constructor-return": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-continue": {
 			"active": 0,
 			"optionString": ""
@@ -1475,6 +1483,10 @@
 			"optionString": ""
 			},
 		"no-dupe-class-members": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-dupe-else-if": {
 			"active": 1,
 			"optionString": ""
 			},
@@ -1778,6 +1790,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-setter-return": {
+			"active": 1,
+			"optionString": ""
+			},
 		"no-shadow": {
 			"active": 0,
 			"optionString": "{'builtinGlobals': false, 'hoist': 'functions', 'allow': []}"
@@ -1981,6 +1997,10 @@
 		"prefer-destructuring": {
 			"active": 0,
 			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
+			},
+		"prefer-exponentiation-operator": {
+			"active": 0,
+			"optionString": ""
 			},
 		"prefer-named-capture-group": {
 			"active": 0,
