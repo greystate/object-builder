@@ -140,7 +140,7 @@ class ObjectBuilderController
 		pre = presenter.renderInterface object
 
 		codeWindow = $ '.output code'
-		codeWindow.innerText = pre
+		codeWindow.textContent = pre
 		codeWindow.className = "language-#{presenter.prism}"
 	
 	renderObject: (object) ->
