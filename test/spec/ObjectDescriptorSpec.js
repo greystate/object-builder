@@ -48,10 +48,18 @@ describe("ObjectDescriptor", () => {
 	})
 	
 	describe("removeProperty", () => {
-		it("remove the property from the object", () => {
+		it("removes the property from the object", () => {
 			this.point.removeProperty("x")
 			expect(this.point.properties.length).toEqual(1)
 			expect(this.point.memberList["p$x"]).toBe(false)
+		})
+	})
+	
+	describe("removeMethod", () => {
+		it("removes the method from the object", () => {
+			this.point.removeMethod("toString")
+			expect(this.point.methods.length).toEqual(1)
+			expect(this.point.memberList["m$toString"]).toBe(false)
 		})
 	})
 	
