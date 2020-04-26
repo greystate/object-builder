@@ -50,12 +50,15 @@ class ObjectBuilderController
 		# Hook up the Save button
 		($ '#save').addEventListener "click", @saveCurrentObjectToLibrary, false
 		
+		# Hook up a future "Remove" button
+		($ '.diagram').addEventListener "click", @diagramClickHandler, false
+		
 		# Light validation warning
 		for textfield in ($ 'input[type="text"]')
 			textfield.addEventListener "keyup", @validityChecker, false
 
 	libraryClickHandler: (e) =>
-		target = e.srcElement
+		target = e.target
 		needle = target
 		needle = needle.parentNode until needle.nodeName is "DIV"
 		
@@ -63,8 +66,15 @@ class ObjectBuilderController
 		if index >= 0
 			@loadObjectIntoCurrentObject (@library.get index).clone()
 		
-
-		
+	diagramClickHandler: (e) =>
+		target = e.target.closest 'td'
+		if target and target.dataset
+			propName = target.dataset.propname ? null
+			methName = target.dataset.methname ? null
+			if propName
+				@removeProperty propName
+			else if methName
+				@removeMethod methName
 
 	validityChecker: (e) ->
 		field = e.target
@@ -93,6 +103,14 @@ class ObjectBuilderController
 		@currentObject.addMethod val
 		@changed()
 	
+	removeProperty: (name) =>
+		@currentObject.removeProperty name
+		@changed()
+		
+	removeMethod: (name) =>
+		@currentObject.removeMethod name
+		@changed()
+		
 	reset: ->
 		@currentObject = new ObjectDescriptor
 		@changed()
@@ -149,6 +167,15 @@ class ObjectBuilderController
 		
 		diagramWindow = $ '.diagram'
 		diagramWindow.innerHTML = code
+		@addControls()
+	
+	addControls: () ->
+		memberRows = $ '.diagram td[data-propname], .diagram td[data-methname]'
+		for mem in memberRows
+			button = document.createElement 'button'
+			button.type = 'button'
+			button.textContent = 'Remove'
+			mem.appendChild button
 	
 	changed: () ->
 		lang = $val('codelang')

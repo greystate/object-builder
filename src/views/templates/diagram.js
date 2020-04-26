@@ -54,7 +54,9 @@
         _ref = this.properties;
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           prop = _ref[_i];
-          __out.push('\n\t<tr><td>.');
+          __out.push('\n\t<tr><td data-propname="');
+          __out.push(__sanitize(prop.name));
+          __out.push('">.');
           __out.push(__sanitize(prop.name));
           __out.push('</td></tr>\n\t');
         }
@@ -74,7 +76,9 @@
         _ref1 = this.methods;
         for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
           method = _ref1[_j];
-          __out.push('\n\t<tr><td>.');
+          __out.push('\n\t<tr><td data-methname="');
+          __out.push(__sanitize(method.name));
+          __out.push('">.');
           __out.push(__sanitize(method.name));
           __out.push('()</td></tr>\n\t');
         }

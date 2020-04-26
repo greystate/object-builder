@@ -3,7 +3,7 @@
 	<tr<%- if @properties.length is 0 then ' class="no-properties"' else '' %>><th>Properties</th></tr>
 	
 	<% for prop in @properties: %>
-	<tr><td>.<%= prop.name %></td></tr>
+	<tr><td data-propname="<%= prop.name %>">.<%= prop.name %></td></tr>
 	<% end %>
 	
 	<% if @properties.length is 0: %>
@@ -12,7 +12,7 @@
 	
 	<tr<%- if @methods.length is 0 then ' class="no-methods"' else '' %>><th>Methods</th></tr>
 	<% for method in @methods: %>
-	<tr><td>.<%= method.name %>()</td></tr>
+	<tr><td data-methname="<%= method.name %>">.<%= method.name %>()</td></tr>
 	<% end %>
 	
 	<% if @methods.length is 0: %>

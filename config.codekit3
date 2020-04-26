@@ -7,7 +7,7 @@
 		"uuidString": "C1599349-7D84-4751-BAD4-B130FC77328C"
 		}
 	],
-"creatorBuild": "32001",
+"creatorBuild": "32137",
 "files": {
 	"/.gitignore": {
 		"cB": 0,
@@ -15,6 +15,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/build/.gitignore",
+		"oF": 0
+		},
+	"/.tm_properties": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/.tm_properties",
 		"oF": 0
 		},
 	"/app-screenshot.png": {
@@ -174,6 +182,17 @@
 		"oAP": "/build/assets/ObjectDescriptor.js",
 		"oF": 0,
 		"oS": 0,
+		"sC": 0,
+		"tS": 1
+		},
+	"/src/coffee/sources.coffee": {
+		"ft": 32,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/build/assets/sources.js",
+		"oF": 0,
+		"oS": 1,
 		"sC": 0,
 		"tS": 1
 		},
@@ -658,6 +677,12 @@
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
+		},
+	"/test": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/test",
+		"oF": 0
 		}
 	},
 "hooks": [
@@ -2699,13 +2724,13 @@
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
+		"compilerType": 1,
 		"createSourceMap": 0,
-		"debugStyle": 0,
 		"decimalPrecision": 10,
+		"emitCharset": 1,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 1,
-		"useLibsass": 1
+		"shouldRunBless": 1
 		},
 	"languageDefaultsSLIM": {
 		"autoOutputAction": 0,
@@ -2784,7 +2809,7 @@
 	"rollupExternals": "",
 	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
 	"rollupTreeshakingEnabled": 1,
-	"skippedFoldersString": "_cache, cache, .idea, log, _logs, logs, node_modules, /storage/framework/sessions, /websiteicons, /docs",
+	"skippedFoldersString": "_cache, cache, .idea, log, _logs, logs, node_modules, /storage/framework/sessions, /websiteicons, /docs, /test/lib, /test",
 	"sourceFolderName": "src",
 	"susyVersion": 3,
 	"tsAllowSyntheticDefaultImports": 0,
