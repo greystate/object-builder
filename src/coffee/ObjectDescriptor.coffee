@@ -22,7 +22,13 @@ class ObjectDescriptor
 				@properties = newProps
 				@memberList["p$#{name}"] = off
 	
-
+	removeMethod: (name) ->
+		if @memberList["m$#{name}"]
+			newMeths = @methods.filter (entry) => entry.name isnt name
+			if newMeths.length + 1 is @methods.length
+				@methods = newMeths
+				@memberList["m$#{name}"] = off
+	
 	clone: ->
 		cloned = new ObjectDescriptor @name
 		cloned.addMethod meth.name for meth in @methods
