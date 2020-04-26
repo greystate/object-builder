@@ -68,13 +68,13 @@ class ObjectBuilderController
 		
 	diagramClickHandler: (e) =>
 		target = e.target.closest 'td'
-		if (target and target.dataset)
+		if target and target.dataset
 			propName = target.dataset.propname ? null
 			methName = target.dataset.methname ? null
-			if (propName)
+			if propName
 				@removeProperty propName
-			else if (methname)
-				@removeMethod methname
+			else if methName
+				@removeMethod methName
 
 	validityChecker: (e) ->
 		field = e.target
@@ -105,6 +105,10 @@ class ObjectBuilderController
 	
 	removeProperty: (name) =>
 		@currentObject.removeProperty name
+		@changed()
+		
+	removeMethod: (name) =>
+		@currentObject.removeMethod name
 		@changed()
 		
 	reset: ->
