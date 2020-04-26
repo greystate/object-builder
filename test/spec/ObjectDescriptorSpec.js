@@ -1,6 +1,7 @@
 describe("ObjectDescriptor", () => {
 	beforeEach(() => {
 		this.od = new ObjectDescriptor()
+		
 		this.point = new ObjectDescriptor("Point")
 		this.point.addProperty("x")
 		this.point.addProperty("y")
