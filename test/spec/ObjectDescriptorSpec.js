@@ -38,7 +38,7 @@ describe("ObjectDescriptor", () => {
 			this.od.addProperty("isArray[]")
 			this.od.addProperty("isDictionary{}")
 			this.od.addProperty("isInt:int")
-			this.od.addProperty("isDouble:double")
+			this.od.addProperty("isDouble:dbl")
 			expect(this.od.properties[0].type).toEqual("boolean")
 			expect(this.od.properties[1].type).toEqual("array")
 			expect(this.od.properties[2].type).toEqual("dictionary")
@@ -79,8 +79,25 @@ describe("ObjectDescriptor", () => {
 			expect(this.point.serialize()).toEqual("Point__x--y__")
 		})
 		
+		it("serializes an ObjectDescriptor with no properties", () => {
+			this.point.removeProperty("x")
+			this.point.removeProperty("y")
+			expect(this.point.serialize()).toEqual("Point____draw--toString")
+		})
+		
 		it("serializes an ObjectDescriptor with properties and methods", () => {
 			expect(this.point.serialize()).toEqual("Point__x--y__draw--toString")
+		})
+		
+		it("maintains type information for typed properties", () => {
+			const vector = new ObjectDescriptor("Vector")
+			vector.addProperty("upwards?")
+			vector.addProperty("x:int")
+			vector.addProperty("y:integer")
+			vector.addProperty("product:double")
+			vector.addProperty("versions[]")
+			vector.addProperty("keys{}")
+			expect(vector.serialize()).toEqual("Vector__upwards?--x:int--y:int--product:dbl--versions[]--keys{}__")
 		})
 	})
 })
