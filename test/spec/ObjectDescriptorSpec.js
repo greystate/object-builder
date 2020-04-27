@@ -101,3 +101,22 @@ describe("ObjectDescriptor", () => {
 		})
 	})
 })
+
+describe("ObjectDescriptor.deserialize", () => {
+	it("reconstructs an object", () => {
+		const point = ObjectDescriptor.deserialize("Point__x--y__draw--toString")
+		expect(point.name).toEqual("Point")
+		expect(point.properties[0].name).toEqual("x")
+		expect(point.properties[1].name).toEqual("y")
+		expect(point.methods[0].name).toEqual("draw")
+		expect(point.methods[1].name).toEqual("toString")
+	})
+
+	it("maintains type information for typed properties", () => {
+		const point = ObjectDescriptor.deserialize("Point__x:int--y:dbl--on?__draw--toString")
+		expect(point.name).toEqual("Point")
+		expect(point.properties[0].type).toEqual("integer")
+		expect(point.properties[1].type).toEqual("double")
+		expect(point.properties[2].type).toEqual("boolean")
+	})
+})

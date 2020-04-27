@@ -39,7 +39,17 @@ class ObjectDescriptor
 		props = (serializeMember prop for prop in @properties)
 		meths = (meth.name for meth in @methods)
 		"#{@name}__#{props.join '--'}__#{meths.join '--'}"
-
+	
+	# Static method to recunstruct an ObjectDescriptor from a string
+	@deserialize: (serializedString) ->
+		[name, props, methods] = serializedString.split '__'
+		obj = new ObjectDescriptor name
+		for prop in props.split '--'
+			obj.addProperty prop
+		for meth in methods.split '--'
+			obj.addMethod meth
+		obj
+	
 	# Return a condensed string for the 
 	
 	serializeMember = (member) ->
