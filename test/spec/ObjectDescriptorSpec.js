@@ -63,4 +63,24 @@ describe("ObjectDescriptor", () => {
 		})
 	})
 	
+	describe("serialize", () => {
+		it("serializes a blank ObjectDescriptor", () => {
+			expect(this.od.serialize()).toEqual("undefined____")
+		})
+		
+		it("serializes an ObjectDescriptor only a name", () => {
+			const p = new ObjectDescriptor("Name")
+			expect(p.serialize()).toEqual("Name____")
+		})
+		
+		it("serializes an ObjectDescriptor with no methods", () => {
+			this.point.removeMethod("draw")
+			this.point.removeMethod("toString")
+			expect(this.point.serialize()).toEqual("Point__x--y__")
+		})
+		
+		it("serializes an ObjectDescriptor with properties and methods", () => {
+			expect(this.point.serialize()).toEqual("Point__x--y__draw--toString")
+		})
+	})
 })
