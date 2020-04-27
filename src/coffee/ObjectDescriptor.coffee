@@ -34,7 +34,13 @@ class ObjectDescriptor
 		cloned.addMethod meth.name for meth in @methods
 		cloned.addProperty "#{prop.name}:#{prop.type}" for prop in @properties
 		cloned
+	
+	serialize: ->
+		props = (prop.name for prop in @properties)
+		meths = (meth.name for meth in @methods)
+		"#{@name}__#{props.join '--'}__#{meths.join '--'}"
 		
+	
 	# Parse the name of a property to get its name (and optionally its type too)
 	#
 	#		name          # => default
