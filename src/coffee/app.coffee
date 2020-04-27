@@ -145,15 +145,7 @@ class ObjectBuilderController
 		($ '#name').focus()
 	
 	testObject: () ->
-		@currentObject = new ObjectDescriptor "ObjectDescriptor"
-		
-		@currentObject.addMethod "addMethod"
-		@currentObject.addMethod "addProperty"
-		@currentObject.addMethod "clone"
-		
-		@currentObject.addProperty "memberlist{}"
-		@currentObject.addProperty "methods[]"
-		@currentObject.addProperty "properties[]"
+		@currentObject = ObjectDescriptor.deserialize "ObjectDescriptor__memberlist{}--methods[]--properties[]__addMethod--addProperty--clone"
 		@changed()
 	
 	renderCode: (object, language) ->
