@@ -21,16 +21,16 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/build/.tm_properties",
-		"oF": 0
+		"oF": 1
 		},
 	"/app-screenshot.png": {
 		"ft": 32768,
 		"iS": 262091,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/build/app-screenshot.png",
-		"oF": 0,
+		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
@@ -462,12 +462,10 @@
 		"sI": 0,
 		"sU": 0
 		},
-	"/src/models/object.form.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/models/object.form.xml",
+	"/src/models": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/models",
 		"oF": 0
 		},
 	"/src/views/index.kit": {
@@ -704,7 +702,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets-verd",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 609057125.62800097
+	"lastBuiltDate": 609628951.11925197
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2809,7 +2807,7 @@
 	"rollupExternals": "",
 	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
 	"rollupTreeshakingEnabled": 1,
-	"skippedFoldersString": "_cache, cache, .idea, log, _logs, logs, node_modules, /storage/framework/sessions, /websiteicons, /docs, /test/lib, /test",
+	"skippedFoldersString": "_cache, cache, .idea, log, _logs, logs, node_modules, /storage/framework/sessions, /websiteicons, /docs, /test/lib, /test, /src/models",
 	"sourceFolderName": "src",
 	"susyVersion": 3,
 	"tsAllowSyntheticDefaultImports": 0,
