@@ -1,6 +1,6 @@
 #### Utilities
 #
-# `$()` and `$val()` are simple utility functions for _jQuery-/Zepto_-style DOM stuff without importing the entire library
+# `$()`, `$$()` and `$val()` are simple utility functions for _jQuery-/Zepto_-style DOM stuff without importing the entire library
 window.$ = (selector) ->
 	elements = document.querySelectorAll selector
 	if elements.length is 1 then elements[0] else elements
@@ -9,6 +9,9 @@ window.$val = (fieldname) ->
 	elements = $("[name='#{fieldname}']")
 	for radio in elements
 		return radio.value if radio.checked
+
+window.$$ = (selector) ->
+	document.querySelectorAll selector
 
 # Global app object
 self.app ?= {}
@@ -170,7 +173,7 @@ class ObjectBuilderController
 		@addControls()
 	
 	addControls: () ->
-		memberRows = $ '.diagram td[data-propname], .diagram td[data-methname]'
+		memberRows = $$ '.diagram td[data-propname], .diagram td[data-methname]'
 		for mem in memberRows
 			button = document.createElement 'button'
 			button.type = 'button'
