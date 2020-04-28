@@ -1,6 +1,11 @@
+TIE = '|-o-|'
+LIB_KEY = 'library'
+EMPTY = ''
+
 class Library
-	constructor: (@el, @itemPresenter) ->
+	constructor: (@el, @itemPresenter, @storage) ->
 		@collection = []
+		@loadFromStorage()
 	
 	add: (object) ->
 		@collection.push object
@@ -16,6 +21,7 @@ class Library
 	
 	changed: () ->
 		@render()
+		@persist()
 	
 	render: () ->
 		@el.innerHTML = ""
@@ -30,3 +36,23 @@ class Library
 		saved.classList.add "diagram-saved"
 		saved.innerHTML = code
 		saved
+	
+	persist: () ->
+		if @collection.length isnt 0
+			@storage.setItem LIB_KEY, @serialize()
+	
+	loadFromStorage: () ->
+		objects = @storage.getItem LIB_KEY
+		if objects? and objects isnt EMPTY
+			for obj in objects.split TIE
+				@collection.push ObjectDescriptor.deserialize obj
+			@changed()
+	
+	clear: () ->
+		@collection = []
+		@changed()
+	
+	serialize: () ->
+		objects = (obj.serialize() for obj in @collection)
+		objects.join TIE
+	
