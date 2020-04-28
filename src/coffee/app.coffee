@@ -13,6 +13,14 @@ window.$val = (fieldname) ->
 window.$$ = (selector) ->
 	document.querySelectorAll selector
 
+getStorageObject = () ->
+	if window.localStorage?
+		window.localStorage
+	else
+		storageObject:
+			setItem: (item, value) ->
+			getItem: (item) ->
+
 # Global app object
 self.app ?= {}
 
@@ -31,7 +39,7 @@ class ObjectBuilderController
 	
 	constructor: () ->
 		@currentObject = new ObjectDescriptor
-		@library = new Library $('.library'), self.app.Languages.Diagram
+		@library = new Library $('.library'), self.app.Languages.Diagram, getStorageObject()
 		@addLanguagesToForm()
 		@assignHandlers()
 		@setFocusAndPickDefaultLanguage()
