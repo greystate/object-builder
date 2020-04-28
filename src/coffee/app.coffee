@@ -127,9 +127,10 @@ class ObjectBuilderController
 		($ ".language").innerHTML += radios.join "\n"
 	
 	saveCurrentObjectToLibrary: (e) =>
-		e.preventDefault()
-		@library.add @currentObject.clone()
-		@reset()
+		if @currentObject.name?
+			e.preventDefault()
+			@library.add @currentObject.clone()
+			@reset()
 	
 	loadObjectIntoCurrentObject: (object) ->
 		@currentObject = object
