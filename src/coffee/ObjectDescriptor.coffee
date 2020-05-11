@@ -34,7 +34,36 @@ class ObjectDescriptor
 		cloned.addMethod meth.name for meth in @methods
 		cloned.addProperty "#{prop.name}:#{prop.type}" for prop in @properties
 		cloned
+	
+	serialize: ->
+		props = (serializeMember prop for prop in @properties)
+		meths = (meth.name for meth in @methods)
+		"#{@name}__#{props.join '--'}__#{meths.join '--'}"
+	
+	# Static method to recunstruct an ObjectDescriptor from a string
+	@deserialize: (serializedString) ->
+		[name, props, methods] = serializedString.split '__'
+		obj = new ObjectDescriptor name
+		for prop in props.split '--'
+			obj.addProperty prop
+		for meth in methods.split '--'
+			obj.addMethod meth
+		obj
+	
+	# Return a condensed string for the 
+	
+	serializeMember = (member) ->
+		name = member.name
+		type = switch member.type
+			when 'integer' then ':int'
+			when 'double' then ':dbl'
+			when 'array' then '[]'
+			when 'dictionary' then '{}'
+			when 'boolean' then '?'
+			else ''
 		
+		"#{name}#{type}"
+	
 	# Parse the name of a property to get its name (and optionally its type too)
 	#
 	#		name          # => default
@@ -43,6 +72,7 @@ class ObjectDescriptor
 	#		name{}        # => dictionary
 	#		name:int      # => integer
 	#		name:integer  # => integer
+	#		name:dbl      # => double
 	#		name:double   # => double
 	
 	extractNameAndType = (naming) ->
@@ -52,6 +82,7 @@ class ObjectDescriptor
 		type = typeTest[1] ? 'default'
 		
 		if type is 'int' then type = 'integer'
+		if type is 'dbl' then type = 'double'
 		
 		if naming.substr(naming.length - 1) is "?"
 			name = naming.substring 0, len - 1

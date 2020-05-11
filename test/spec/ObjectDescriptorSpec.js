@@ -38,7 +38,7 @@ describe("ObjectDescriptor", () => {
 			this.od.addProperty("isArray[]")
 			this.od.addProperty("isDictionary{}")
 			this.od.addProperty("isInt:int")
-			this.od.addProperty("isDouble:double")
+			this.od.addProperty("isDouble:dbl")
 			expect(this.od.properties[0].type).toEqual("boolean")
 			expect(this.od.properties[1].type).toEqual("array")
 			expect(this.od.properties[2].type).toEqual("dictionary")
@@ -63,4 +63,60 @@ describe("ObjectDescriptor", () => {
 		})
 	})
 	
+	describe("serialize", () => {
+		it("serializes a blank ObjectDescriptor", () => {
+			expect(this.od.serialize()).toEqual("undefined____")
+		})
+		
+		it("serializes an ObjectDescriptor only a name", () => {
+			const p = new ObjectDescriptor("Name")
+			expect(p.serialize()).toEqual("Name____")
+		})
+		
+		it("serializes an ObjectDescriptor with no methods", () => {
+			this.point.removeMethod("draw")
+			this.point.removeMethod("toString")
+			expect(this.point.serialize()).toEqual("Point__x--y__")
+		})
+		
+		it("serializes an ObjectDescriptor with no properties", () => {
+			this.point.removeProperty("x")
+			this.point.removeProperty("y")
+			expect(this.point.serialize()).toEqual("Point____draw--toString")
+		})
+		
+		it("serializes an ObjectDescriptor with properties and methods", () => {
+			expect(this.point.serialize()).toEqual("Point__x--y__draw--toString")
+		})
+		
+		it("maintains type information for typed properties", () => {
+			const vector = new ObjectDescriptor("Vector")
+			vector.addProperty("upwards?")
+			vector.addProperty("x:int")
+			vector.addProperty("y:integer")
+			vector.addProperty("product:double")
+			vector.addProperty("versions[]")
+			vector.addProperty("keys{}")
+			expect(vector.serialize()).toEqual("Vector__upwards?--x:int--y:int--product:dbl--versions[]--keys{}__")
+		})
+	})
+})
+
+describe("ObjectDescriptor.deserialize", () => {
+	it("reconstructs an object", () => {
+		const point = ObjectDescriptor.deserialize("Point__x--y__draw--toString")
+		expect(point.name).toEqual("Point")
+		expect(point.properties[0].name).toEqual("x")
+		expect(point.properties[1].name).toEqual("y")
+		expect(point.methods[0].name).toEqual("draw")
+		expect(point.methods[1].name).toEqual("toString")
+	})
+
+	it("maintains type information for typed properties", () => {
+		const point = ObjectDescriptor.deserialize("Point__x:int--y:dbl--on?__draw--toString")
+		expect(point.name).toEqual("Point")
+		expect(point.properties[0].type).toEqual("integer")
+		expect(point.properties[1].type).toEqual("double")
+		expect(point.properties[2].type).toEqual("boolean")
+	})
 })

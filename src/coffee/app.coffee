@@ -13,6 +13,14 @@ window.$val = (fieldname) ->
 window.$$ = (selector) ->
 	document.querySelectorAll selector
 
+getStorageObject = () ->
+	if window.localStorage?
+		window.localStorage
+	else
+		storageObject:
+			setItem: (item, value) ->
+			getItem: (item) ->
+
 # Global app object
 self.app ?= {}
 
@@ -31,7 +39,7 @@ class ObjectBuilderController
 	
 	constructor: () ->
 		@currentObject = new ObjectDescriptor
-		@library = new Library $('.library'), self.app.Languages.Diagram
+		@library = new Library $('.library'), self.app.Languages.Diagram, getStorageObject()
 		@addLanguagesToForm()
 		@assignHandlers()
 		@setFocusAndPickDefaultLanguage()
@@ -127,9 +135,10 @@ class ObjectBuilderController
 		($ ".language").innerHTML += radios.join "\n"
 	
 	saveCurrentObjectToLibrary: (e) =>
-		e.preventDefault()
-		@library.add @currentObject.clone()
-		@reset()
+		if @currentObject.name?
+			e.preventDefault()
+			@library.add @currentObject.clone()
+			@reset()
 	
 	loadObjectIntoCurrentObject: (object) ->
 		@currentObject = object
@@ -145,15 +154,7 @@ class ObjectBuilderController
 		($ '#name').focus()
 	
 	testObject: () ->
-		@currentObject = new ObjectDescriptor "ObjectDescriptor"
-		
-		@currentObject.addMethod "addMethod"
-		@currentObject.addMethod "addProperty"
-		@currentObject.addMethod "clone"
-		
-		@currentObject.addProperty "memberlist{}"
-		@currentObject.addProperty "methods[]"
-		@currentObject.addProperty "properties[]"
+		@currentObject = ObjectDescriptor.deserialize "ObjectDescriptor__memberlist{}--methods[]--properties[]__addMethod--addProperty--clone"
 		@changed()
 	
 	renderCode: (object, language) ->
