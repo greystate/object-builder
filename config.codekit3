@@ -7,7 +7,7 @@
       "uuidString" : "C1599349-7D84-4751-BAD4-B130FC77328C"
     }
   ],
-  "creatorBuild" : "34081",
+  "creatorBuild" : "34335",
   "files" : {
     "\/.gitignore" : {
       "cB" : 0,
@@ -15,6 +15,12 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/build\/.gitignore",
+      "oF" : 0
+    },
+    "\/.nova" : {
+      "ft" : 65536,
+      "oA" : 1,
+      "oAP" : "\/build\/.nova",
       "oF" : 0
     },
     "\/.tm_properties" : {
@@ -29,7 +35,7 @@
       "ft" : 32768,
       "iS" : 262091,
       "oA" : 1,
-      "oAP" : "\/build\/app-screenshot.png",
+      "oAP" : "\/build\/assets\/app-screenshot.png",
       "oF" : 1,
       "oIPL" : 0,
       "opt" : 1,
@@ -52,10 +58,204 @@
       "oAP" : "\/build\/Cakefile",
       "oF" : 1
     },
-    "\/docs" : {
-      "ft" : 65536,
-      "oA" : 1,
-      "oAP" : "\/build\/docs",
+    "\/docs\/app.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/docs\/app.html",
+      "oF" : 0
+    },
+    "\/docs\/CoffeeScript.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/docs\/CoffeeScript.html",
+      "oF" : 0
+    },
+    "\/docs\/Diagram.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/docs\/Diagram.html",
+      "oF" : 0
+    },
+    "\/docs\/docco.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/assets\/docco.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/docs\/ES6.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/docs\/ES6.html",
+      "oF" : 0
+    },
+    "\/docs\/JavaScript.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/docs\/JavaScript.html",
+      "oF" : 0
+    },
+    "\/docs\/Language.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/docs\/Language.html",
+      "oF" : 0
+    },
+    "\/docs\/Library.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/docs\/Library.html",
+      "oF" : 0
+    },
+    "\/docs\/ObjectDescriptor.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/docs\/ObjectDescriptor.html",
+      "oF" : 0
+    },
+    "\/docs\/public\/fonts\/aller-bold.eot" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/docs\/public\/fonts\/aller-bold.eot",
+      "oF" : 0
+    },
+    "\/docs\/public\/fonts\/aller-bold.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/docs\/public\/fonts\/aller-bold.ttf",
+      "oF" : 0
+    },
+    "\/docs\/public\/fonts\/aller-bold.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/build\/aller-bold.woff",
+      "oF" : 0
+    },
+    "\/docs\/public\/fonts\/aller-light.eot" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/docs\/public\/fonts\/aller-light.eot",
+      "oF" : 0
+    },
+    "\/docs\/public\/fonts\/aller-light.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/docs\/public\/fonts\/aller-light.ttf",
+      "oF" : 0
+    },
+    "\/docs\/public\/fonts\/aller-light.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/build\/aller-light.woff",
+      "oF" : 0
+    },
+    "\/docs\/public\/fonts\/novecento-bold.eot" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/docs\/public\/fonts\/novecento-bold.eot",
+      "oF" : 0
+    },
+    "\/docs\/public\/fonts\/novecento-bold.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/docs\/public\/fonts\/novecento-bold.ttf",
+      "oF" : 0
+    },
+    "\/docs\/public\/fonts\/novecento-bold.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/build\/novecento-bold.woff",
+      "oF" : 0
+    },
+    "\/docs\/public\/fonts\/roboto-black.eot" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/docs\/public\/fonts\/roboto-black.eot",
+      "oF" : 0
+    },
+    "\/docs\/public\/fonts\/roboto-black.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/docs\/public\/fonts\/roboto-black.ttf",
+      "oF" : 0
+    },
+    "\/docs\/public\/fonts\/roboto-black.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/build\/roboto-black.woff",
+      "oF" : 0
+    },
+    "\/docs\/public\/stylesheets\/normalize.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/assets\/normalize.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/docs\/Swift.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/docs\/Swift.html",
+      "oF" : 0
+    },
+    "\/docs\/XML.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/docs\/XML.html",
       "oF" : 0
     },
     "\/README.md" : {
@@ -98,7 +298,6 @@
       "oAP" : "\/build\/assets\/app.js",
       "oF" : 0,
       "oS" : 0,
-      "sC" : 0,
       "tS" : 1
     },
     "\/src\/coffee\/CoffeeScript.coffee" : {
@@ -109,7 +308,6 @@
       "oAP" : "\/build\/assets\/CoffeeScript.js",
       "oF" : 0,
       "oS" : 0,
-      "sC" : 0,
       "tS" : 1
     },
     "\/src\/coffee\/CSharp.coffee" : {
@@ -120,7 +318,6 @@
       "oAP" : "\/build\/assets\/CSharp.js",
       "oF" : 0,
       "oS" : 0,
-      "sC" : 0,
       "tS" : 1
     },
     "\/src\/coffee\/Diagram.coffee" : {
@@ -131,7 +328,6 @@
       "oAP" : "\/build\/assets\/Diagram.js",
       "oF" : 0,
       "oS" : 0,
-      "sC" : 0,
       "tS" : 1
     },
     "\/src\/coffee\/ES6.coffee" : {
@@ -142,7 +338,6 @@
       "oAP" : "\/build\/assets\/ES6.js",
       "oF" : 0,
       "oS" : 0,
-      "sC" : 0,
       "tS" : 1
     },
     "\/src\/coffee\/JavaScript.coffee" : {
@@ -153,7 +348,6 @@
       "oAP" : "\/build\/assets\/JavaScript.js",
       "oF" : 0,
       "oS" : 0,
-      "sC" : 0,
       "tS" : 1
     },
     "\/src\/coffee\/Language.coffee" : {
@@ -164,7 +358,6 @@
       "oAP" : "\/build\/assets\/Language.js",
       "oF" : 0,
       "oS" : 0,
-      "sC" : 0,
       "tS" : 1
     },
     "\/src\/coffee\/Library.coffee" : {
@@ -175,7 +368,6 @@
       "oAP" : "\/build\/assets\/Library.js",
       "oF" : 0,
       "oS" : 0,
-      "sC" : 0,
       "tS" : 1
     },
     "\/src\/coffee\/ObjectDescriptor.coffee" : {
@@ -186,7 +378,6 @@
       "oAP" : "\/build\/assets\/ObjectDescriptor.js",
       "oF" : 0,
       "oS" : 0,
-      "sC" : 0,
       "tS" : 1
     },
     "\/src\/coffee\/sources.coffee" : {
@@ -197,7 +388,6 @@
       "oAP" : "\/build\/assets\/sources.js",
       "oF" : 0,
       "oS" : 1,
-      "sC" : 0,
       "tS" : 1
     },
     "\/src\/coffee\/Swift.coffee" : {
@@ -208,7 +398,6 @@
       "oAP" : "\/build\/assets\/Swift.js",
       "oF" : 0,
       "oS" : 0,
-      "sC" : 0,
       "tS" : 1
     },
     "\/src\/coffee\/XML.coffee" : {
@@ -219,7 +408,6 @@
       "oAP" : "\/build\/assets\/XML.js",
       "oF" : 0,
       "oS" : 0,
-      "sC" : 0,
       "tS" : 1
     },
     "\/src\/less\/app.less" : {
@@ -408,7 +596,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/build\/assets\/libs.min.js",
+      "oAP" : "\/build\/assets\/libs.js",
       "oF" : 0,
       "sC" : 0,
       "tS" : 0
@@ -419,7 +607,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/build\/assets\/prism-all.min.js",
+      "oAP" : "\/build\/assets\/prism-all.js",
       "oF" : 0,
       "sC" : 0,
       "tS" : 0
@@ -432,7 +620,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/build\/lib\/prism\/prism-coy.css",
+      "oAP" : "\/build\/assets\/prism-coy.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -444,7 +632,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/build\/lib\/prism\/prism-dark.css",
+      "oAP" : "\/build\/assets\/prism-dark.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -456,7 +644,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/build\/lib\/prism\/prism.css",
+      "oAP" : "\/build\/assets\/prism.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -496,10 +684,12 @@
       "sI" : 0,
       "sU" : 0
     },
-    "\/src\/models" : {
-      "ft" : 65536,
-      "oA" : 1,
-      "oAP" : "\/build\/models",
+    "\/src\/models\/object.form.xml" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/models\/object.form.xml",
       "oF" : 0
     },
     "\/src\/views\/index.kit" : {
@@ -507,7 +697,7 @@
       "ft" : 2048,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/build\/index.html",
+      "oAP" : "\/build\/views\/index.html",
       "oF" : 0
     },
     "\/src\/views\/index\/_content.kit" : {
@@ -515,7 +705,7 @@
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/build\/_content.html",
+      "oAP" : "\/build\/views\/index\/_content.html",
       "oF" : 0
     },
     "\/src\/views\/shared\/_asset_version.kit" : {
@@ -523,7 +713,7 @@
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/build\/_asset_version.html",
+      "oAP" : "\/build\/views\/shared\/_asset_version.html",
       "oF" : 0
     },
     "\/src\/views\/shared\/_footer.kit" : {
@@ -531,7 +721,7 @@
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/build\/_footer.html",
+      "oAP" : "\/build\/views\/shared\/_footer.html",
       "oF" : 0
     },
     "\/src\/views\/shared\/_form.kit" : {
@@ -539,7 +729,7 @@
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/build\/_form.html",
+      "oAP" : "\/build\/views\/shared\/_form.html",
       "oF" : 0
     },
     "\/src\/views\/shared\/_head.kit" : {
@@ -547,7 +737,7 @@
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/build\/_head.html",
+      "oAP" : "\/build\/views\/shared\/_head.html",
       "oF" : 0
     },
     "\/src\/views\/shared\/_scripts.kit" : {
@@ -555,7 +745,7 @@
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/build\/_scripts.html",
+      "oAP" : "\/build\/views\/shared\/_scripts.html",
       "oF" : 0
     },
     "\/src\/views\/shared\/_type.kit" : {
@@ -563,7 +753,7 @@
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/build\/_type.html",
+      "oAP" : "\/build\/views\/shared\/_type.html",
       "oF" : 0
     },
     "\/src\/views\/templates\/coffee.eco" : {
@@ -580,7 +770,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/build\/assets\/coffee.min.js",
+      "oAP" : "\/build\/assets\/coffee.js",
       "oF" : 0,
       "sC" : 0,
       "tS" : 0
@@ -599,7 +789,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/build\/assets\/csharp.min.js",
+      "oAP" : "\/build\/assets\/csharp.js",
       "oF" : 0,
       "sC" : 0,
       "tS" : 0
@@ -618,7 +808,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/build\/assets\/diagram.min.js",
+      "oAP" : "\/build\/assets\/diagram.js",
       "oF" : 0,
       "sC" : 0,
       "tS" : 0
@@ -637,7 +827,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/build\/assets\/es6.min.js",
+      "oAP" : "\/build\/assets\/es6.js",
       "oF" : 0,
       "sC" : 0,
       "tS" : 0
@@ -656,7 +846,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/build\/assets\/javascript.min.js",
+      "oAP" : "\/build\/assets\/javascript.js",
       "oF" : 0,
       "sC" : 0,
       "tS" : 0
@@ -675,7 +865,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/build\/assets\/swift.min.js",
+      "oAP" : "\/build\/assets\/swift.js",
       "oF" : 0,
       "sC" : 0,
       "tS" : 0
@@ -686,7 +876,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/build\/assets\/templates.min.js",
+      "oAP" : "\/build\/assets\/templates.js",
       "oF" : 0,
       "sC" : 0,
       "tS" : 0
@@ -705,21 +895,100 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/build\/assets\/xml.min.js",
+      "oAP" : "\/build\/assets\/xml.js",
       "oF" : 0,
       "sC" : 0,
       "tS" : 0
     },
-    "\/test" : {
-      "ft" : 65536,
-      "oA" : 1,
-      "oAP" : "\/build\/test",
+    "\/test\/lib\/jasmine-3.5.0\/boot.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/assets\/boot.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/test\/lib\/jasmine-3.5.0\/jasmine_favicon.png" : {
+      "ft" : 32768,
+      "iS" : 1486,
+      "oA" : 0,
+      "oAP" : "\/build\/assets\/jasmine_favicon.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 80,
+      "rq" : 75
+    },
+    "\/test\/lib\/jasmine-3.5.0\/jasmine-html.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/assets\/jasmine-html.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/test\/lib\/jasmine-3.5.0\/jasmine.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/assets\/jasmine.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/test\/lib\/jasmine-3.5.0\/jasmine.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/assets\/jasmine.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/test\/MIT.LICENSE" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/test\/MIT.LICENSE",
+      "oF" : 0
+    },
+    "\/test\/spec\/ObjectDescriptorSpec.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/assets\/ObjectDescriptorSpec.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/test\/SpecRunner.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/test\/SpecRunner.html",
       "oF" : 0
     }
   },
   "hooks" : [
     {
-      "enabled" : 1,
+      "enabled" : 0,
       "name" : "Compile ECO templates",
       "predicateDataBase64Encoded" : "YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBYLDBMYICorLjU5Pj9CRkpPUFNaYGRmVSRudWxs0w0ODxAREl8QF05TQ29tcG91bmRQcmVkaWNhdGVUeXBlXxAPTlNTdWJwcmVkaWNhdGVzViRjbGFzcxACgAKAFdIUDxUXWk5TLm9iamVjdHOhFoADgBTUDxkaGxwdHh9fEBFOU1JpZ2h0RXhwcmVzc2lvbl8QEE5TTGVmdEV4cHJlc3Npb25fEBNOU1ByZWRpY2F0ZU9wZXJhdG9ygBOADoAEgBHVISIjJA8lJicoKVlOU09wZXJhbmReTlNTZWxlY3Rvck5hbWVfEBBOU0V4cHJlc3Npb25UeXBlW05TQXJndW1lbnRzgAaABRADgAiADVx2YWx1ZUZvcktleTrSIw8sLRABgAfSLzAxMlokY2xhc3NuYW1lWCRjbGFzc2VzXxAQTlNTZWxmRXhwcmVzc2lvbqMxMzRcTlNFeHByZXNzaW9uWE5TT2JqZWN00hQPNjihN4AJgAzTDyM6Ozw9WU5TS2V5UGF0aIALEAqACl1pbnB1dEZ1bGxQYXRo0i8wQEFfEBxOU0tleVBhdGhTcGVjaWZpZXJFeHByZXNzaW9uo0AzNNIvMENEXk5TTXV0YWJsZUFycmF5o0NFNFdOU0FycmF50i8wR0hfEBNOU0tleVBhdGhFeHByZXNzaW9upEdJMzRfEBROU0Z1bmN0aW9uRXhwcmVzc2lvbtNLIw9MTU5fEA9OU0NvbnN0YW50VmFsdWWADxAAgBBULmVjb9IvMFFSXxAZTlNDb25zdGFudFZhbHVlRXhwcmVzc2lvbqNRMzTVD1RVVldYTScsWVpOU01vZGlmaWVyV05TRmxhZ3NaTlNQb3NpdGlvbl5OU09wZXJhdG9yVHlwZYASEAnSLzBbXF8QHE5TU3Vic3RyaW5nUHJlZGljYXRlT3BlcmF0b3KkXV5fNF8QHE5TU3Vic3RyaW5nUHJlZGljYXRlT3BlcmF0b3JfEBlOU1N0cmluZ1ByZWRpY2F0ZU9wZXJhdG9yXxATTlNQcmVkaWNhdGVPcGVyYXRvctIvMGFiXxAVTlNDb21wYXJpc29uUHJlZGljYXRlo2FjNFtOU1ByZWRpY2F0ZdIvMEVlokU00i8wZ2hfEBNOU0NvbXBvdW5kUHJlZGljYXRlo2djNAAIABEAGgAkACkAMgA3AEkATABRAFMAbAByAHkAkwClAKwArgCwALIAtwDCAMQAxgDIANEA5QD4AQ4BEAESARQBFgEhASsBOgFNAVkBWwFdAV8BYQFjAXABdQF3AXkBfgGJAZIBpQGpAbYBvwHEAcYByAHKAdEB2wHdAd8B4QHvAfQCEwIXAhwCKwIvAjcCPAJSAlcCbgJ1AocCiQKLAo0CkgKXArMCtwLCAs0C1QLgAu8C8QLzAvgDFwMcAzsDVwNtA3IDigOOA5oDnwOiA6cDvQAAAAAAAAIBAAAAAAAAAGkAAAAAAAAAAAAAAAAAAAPB",
       "runOrder" : 0,
@@ -733,7 +1002,7 @@
   },
   "projectAttributes" : {
     "creationDate" : 597508393.61454594,
-    "displayValue" : "​object-builder",
+    "displayValue" : "object-builder",
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-verd",
     "iconImageWasSetByUser" : 0,
@@ -1035,144 +1304,6 @@
     "buildFolderActive" : 1,
     "buildFolderName" : "build",
     "cleanBuild" : 1,
-    "coffeeLintFlags2" : {
-      "arrow_spacing" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "camel_case_classes" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "colon_assignment_spacing" : {
-        "active" : 0,
-        "flagValue" : 1
-      },
-      "cyclomatic_complexity" : {
-        "active" : 0,
-        "flagValue" : 10
-      },
-      "duplicate_key" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "empty_constructor_needs_parens" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "ensure_comprehensions" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "indentation" : {
-        "active" : 1,
-        "flagValue" : 2
-      },
-      "line_endings" : {
-        "active" : 0,
-        "flagValue" : 0
-      },
-      "max_line_length" : {
-        "active" : 0,
-        "flagValue" : 150
-      },
-      "missing_fat_arrows" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "newlines_after_classes" : {
-        "active" : 0,
-        "flagValue" : 3
-      },
-      "no_backticks" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_debugger" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_empty_functions" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "no_empty_param_list" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "no_implicit_braces" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_implicit_parens" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "no_interpolation_in_single_quotes" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "no_nested_string_interpolation" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_plusplus" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "no_private_function_fat_arrows" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_stand_alone_at" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_tabs" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_this" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "no_throwing_strings" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_trailing_semicolons" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_trailing_whitespace" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_unnecessary_double_quotes" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "no_unnecessary_fat_arrows" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "non_empty_constructor_needs_parens" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "prefer_english_operator" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "space_operators" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "spacing_after_comma" : {
-        "active" : 1,
-        "flagValue" : -1
-      }
-    },
     "cssoForceMediaMerge" : 0,
     "cssoRestructure" : 1,
     "environmentVariableEntries" : [
@@ -1184,7 +1315,7 @@
     "esLintRules" : {
       "accessor-pairs" : {
         "active" : 0,
-        "optionString" : "{'setWithoutGet': true, 'getWithoutSet': false}"
+        "optionString" : "{'setWithoutGet': true, 'getWithoutSet': false, 'enforceForClassMembers': true}"
       },
       "array-bracket-newline" : {
         "active" : 0,
@@ -1231,7 +1362,7 @@
       },
       "camelcase" : {
         "active" : 0,
-        "optionString" : "{'properties': 'always', 'ignoreDestructuring': false}"
+        "optionString" : "{'properties': 'always', 'ignoreDestructuring': false, 'ignoreImports': false}"
       },
       "capitalized-comments" : {
         "active" : 0,
@@ -1239,7 +1370,7 @@
       },
       "class-methods-use-this" : {
         "active" : 0,
-        "optionString" : "{'exceptMethods': []}"
+        "optionString" : "{'exceptMethods': [], 'enforceForClassFields': true}"
       },
       "comma-dangle" : {
         "active" : 1,
@@ -1259,7 +1390,7 @@
       },
       "computed-property-spacing" : {
         "active" : 0,
-        "optionString" : "'never'"
+        "optionString" : "'never', {'enforceForClassMembers': true}"
       },
       "consistent-return" : {
         "active" : 0,
@@ -1400,7 +1531,7 @@
       },
       "max-classes-per-file" : {
         "active" : 0,
-        "optionString" : "1"
+        "optionString" : "{'ignoreExpressions': false, 'max': 1}"
       },
       "max-depth" : {
         "active" : 0,
@@ -1580,7 +1711,7 @@
       },
       "no-extra-parens" : {
         "active" : 0,
-        "optionString" : "'all', {'conditionalAssign': false, 'returnAssign': false, 'nestedBinaryExpressions': false, 'ignoreJSX': 'none', 'enforceForArrowConditionals': false}"
+        "optionString" : "'all', {'conditionalAssign': false, 'returnAssign': false, 'nestedBinaryExpressions': false, 'ignoreJSX': 'none', 'enforceForArrowConditionals': false, 'enforceForSequenceExpressions': false, 'enforceForNewInMemberExpressions': false}"
       },
       "no-extra-semi" : {
         "active" : 1
@@ -1600,7 +1731,7 @@
       },
       "no-implicit-coercion" : {
         "active" : 0,
-        "optionString" : "{'boolean': true, 'number': true, 'string': true, 'allow': []}"
+        "optionString" : "{'boolean': true, 'number': true, 'string': true, 'disallowTemplateShorthand': false, 'allow': []}"
       },
       "no-implicit-globals" : {
         "active" : 0
@@ -1624,7 +1755,7 @@
       },
       "no-invalid-this" : {
         "active" : 0,
-        "optionString" : ""
+        "optionString" : "{'capIsConstructor': true}"
       },
       "no-irregular-whitespace" : {
         "active" : 1,
@@ -1650,11 +1781,11 @@
         "active" : 0
       },
       "no-loss-of-precision" : {
-        "active" : 0
+        "active" : 1
       },
       "no-magic-numbers" : {
         "active" : 0,
-        "optionString" : "{'ignore': [], 'ignoreArrayIndexes': true, 'enforceConst': false, 'detectObjects': false}"
+        "optionString" : "{'ignore': [], 'ignoreArrayIndexes': true, 'ignoreDefaultValues': false, 'enforceConst': false, 'detectObjects': false}"
       },
       "no-misleading-character-class" : {
         "active" : 0
@@ -1672,7 +1803,8 @@
         "optionString" : ""
       },
       "no-multi-assign" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : "{'ignoreNonDeclaration': false}"
       },
       "no-multi-spaces" : {
         "active" : 0,
@@ -1710,7 +1842,7 @@
         "active" : 0
       },
       "no-nonoctal-decimal-escape" : {
-        "active" : 0
+        "active" : 1
       },
       "no-obj-calls" : {
         "active" : 1
@@ -1795,7 +1927,8 @@
         "active" : 0
       },
       "no-sequences" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : "{'allowInParentheses': true}"
       },
       "no-setter-return" : {
         "active" : 1
@@ -1846,7 +1979,7 @@
       },
       "no-underscore-dangle" : {
         "active" : 0,
-        "optionString" : "{'allow': [], 'allowAfterThis': false, 'allowAfterSuper': false, 'enforceInMethodNames': false}"
+        "optionString" : "{'allow': [], 'allowAfterThis': false, 'allowAfterSuper': false, 'allowAfterThisConstructor': false, 'enforceInMethodNames': false, 'allowFunctionParams': true}"
       },
       "no-unexpected-multiline" : {
         "active" : 1
@@ -1870,18 +2003,21 @@
       },
       "no-unsafe-negation" : {
         "active" : 1,
-        "optionString" : ""
+        "optionString" : "{'enforceForOrderingRelations': false}"
       },
       "no-unsafe-optional-chaining" : {
-        "active" : 0,
+        "active" : 1,
         "optionString" : "{'disallowArithmeticOperators': false}"
       },
       "no-unused-expressions" : {
         "active" : 0,
-        "optionString" : "{'allowShortCircuit': false, 'allowTernary': false, 'allowTaggedTemplates': false}"
+        "optionString" : "{'allowShortCircuit': false, 'allowTernary': false, 'allowTaggedTemplates': false, 'enforceForJSX': false}"
       },
       "no-unused-labels" : {
         "active" : 1
+      },
+      "no-unused-private-class-members" : {
+        "active" : 0
       },
       "no-unused-vars" : {
         "active" : 1,
@@ -1892,7 +2028,7 @@
         "optionString" : "{'functions': true, 'classes': true, 'variables': true}"
       },
       "no-useless-backreference" : {
-        "active" : 0
+        "active" : 1
       },
       "no-useless-call" : {
         "active" : 0
@@ -1902,7 +2038,7 @@
       },
       "no-useless-computed-key" : {
         "active" : 0,
-        "optionString" : ""
+        "optionString" : "{'enforceForClassMembers': false}"
       },
       "no-useless-concat" : {
         "active" : 0
@@ -1925,7 +2061,7 @@
       },
       "no-void" : {
         "active" : 0,
-        "optionString" : ""
+        "optionString" : "{'allowAsStatement': false}"
       },
       "no-warning-comments" : {
         "active" : 0,
@@ -2001,6 +2137,9 @@
       "prefer-numeric-literals" : {
         "active" : 0
       },
+      "prefer-object-has-own" : {
+        "active" : 0
+      },
       "prefer-object-spread" : {
         "active" : 0
       },
@@ -2033,7 +2172,8 @@
         "optionString" : "'always'"
       },
       "require-atomic-updates" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : "{'allowProperties': false}"
       },
       "require-await" : {
         "active" : 0
@@ -2066,7 +2206,7 @@
       },
       "sort-imports" : {
         "active" : 0,
-        "optionString" : "{'ignoreCase': false, 'ignoreMemberSort': true, 'memberSyntaxSortOrder': ['none', 'all', 'multiple', 'single']}"
+        "optionString" : "{'ignoreCase': false, 'ignoreMemberSort': true, 'memberSyntaxSortOrder': ['none', 'all', 'multiple', 'single'], 'allowSeparatedGroups': false}"
       },
       "sort-keys" : {
         "active" : 0,
@@ -2125,7 +2265,7 @@
       },
       "use-isnan" : {
         "active" : 1,
-        "optionString" : ""
+        "optionString" : "{'enforceForSwitchCase': true, 'enforceForIndexOf': false}"
       },
       "valid-jsdoc" : {
         "active" : 0,
@@ -2159,354 +2299,6 @@
     "gitIgnoreBuildFolder" : 1,
     "hideConfigFile" : 0,
     "jsCheckerReservedNamesString" : "",
-    "jsHintFlags2" : {
-      "asi" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "bitwise" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "boss" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "browser" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "browserify" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "camelcase" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "couch" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "curly" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "debug" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "devel" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "dojo" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "elision" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "eqeqeq" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "eqnull" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "es3" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "esnext" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "evil" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "expr" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "forin" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "freeze" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "funcscope" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "futurehostile" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "globalstrict" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "immed" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "indent" : {
-        "active" : 0,
-        "flagValue" : 4
-      },
-      "iterator" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "jasmine" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "jquery" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "lastsemic" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "latedef" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "laxbreak" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "laxcomma" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "loopfunc" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "maxcomplexity" : {
-        "active" : 0,
-        "flagValue" : 10
-      },
-      "maxdepth" : {
-        "active" : 0,
-        "flagValue" : 3
-      },
-      "maxlen" : {
-        "active" : 0,
-        "flagValue" : 150
-      },
-      "maxparams" : {
-        "active" : 0,
-        "flagValue" : 3
-      },
-      "maxstatements" : {
-        "active" : 0,
-        "flagValue" : 4
-      },
-      "mocha" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "mootools" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "moz" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "multistr" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "newcap" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "noarg" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "nocomma" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "node" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "noempty" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "nonbsp" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "nonew" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "nonstandard" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "notypeof" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "noyield" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "onecase" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "phantom" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "plusplus" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "proto" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "prototypejs" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "qunit" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "regexp" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "rhino" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "scripturl" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "shadow" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "shelljs" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "singleGroups" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "strict" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "sub" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "supernew" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "typed" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "undef" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "unused" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "varstmt" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "withstmt" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "worker" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "wsh" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "yui" : {
-        "active" : 0,
-        "flagValue" : -1
-      }
-    },
-    "jsLintFlags2" : {
-      "bitwise" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "browser" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "couch" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "devel" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "es6" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "eval" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "for" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "maxlen" : {
-        "active" : 0,
-        "flagValue" : 150
-      },
-      "node" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "this" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "white" : {
-        "active" : 0,
-        "flagValue" : -1
-      }
-    },
     "languageDefaultsCOFFEE" : {
       "autoOutputAction" : 0,
       "autoOutputPathFilenamePattern" : "*.js",
@@ -2514,33 +2306,32 @@
       "autoOutputPathReplace1" : "",
       "autoOutputPathReplace2" : "",
       "autoOutputPathStyle" : 1,
-      "minifierStyle" : 1,
+      "minifierStyle" : 0,
       "outputStyle" : 0,
       "sourceMapStyle" : 0,
-      "syntaxCheckerStyle" : 0,
       "transpilerStyle" : 1
     },
     "languageDefaultsCSS" : {
-      "autoOutputAction" : 2,
+      "autoOutputAction" : 0,
       "autoOutputPathFilenamePattern" : "*.css",
-      "autoOutputPathRelativePath" : "",
+      "autoOutputPathRelativePath" : "assets",
       "autoOutputPathReplace1" : "",
       "autoOutputPathReplace2" : "",
-      "autoOutputPathStyle" : 0,
+      "autoOutputPathStyle" : 1,
       "combineImports" : 0,
       "cssoStyle" : 0,
       "purgeCSSStyle" : 0,
-      "shouldRunAutoprefixer" : 0,
+      "shouldRunAutoprefixer" : 1,
       "shouldRunBless" : 0,
       "sourceMapStyle" : 0
     },
     "languageDefaultsGIF" : {
       "autoOutputAction" : 0,
       "autoOutputPathFilenamePattern" : "*.gif",
-      "autoOutputPathRelativePath" : "",
+      "autoOutputPathRelativePath" : "assets",
       "autoOutputPathReplace1" : "",
       "autoOutputPathReplace2" : "",
-      "autoOutputPathStyle" : 0,
+      "autoOutputPathStyle" : 1,
       "webpOptimizationPresetUUID" : "lpckwebp-none",
       "webpRGBQuality" : 75
     },
@@ -2563,26 +2354,26 @@
     "languageDefaultsJPG" : {
       "autoOutputAction" : 0,
       "autoOutputPathFilenamePattern" : "*.jpg",
-      "autoOutputPathRelativePath" : "",
+      "autoOutputPathRelativePath" : "assets",
       "autoOutputPathReplace1" : "",
       "autoOutputPathReplace2" : "",
-      "autoOutputPathStyle" : 0,
+      "autoOutputPathStyle" : 1,
       "outputFormat" : 0,
-      "quality" : 100,
+      "quality" : 80,
       "webpOptimizationPresetUUID" : "lpckwebp-none",
       "webpRGBQuality" : 75
     },
     "languageDefaultsJS" : {
       "autoOutputAction" : 0,
-      "autoOutputPathFilenamePattern" : "*.min.js",
+      "autoOutputPathFilenamePattern" : "*.js",
       "autoOutputPathRelativePath" : "assets",
       "autoOutputPathReplace1" : "",
       "autoOutputPathReplace2" : "",
       "autoOutputPathStyle" : 1,
       "bundleFormat" : 0,
-      "minifierStyle" : 1,
+      "minifierStyle" : 0,
       "sourceMapStyle" : 0,
-      "syntaxCheckerStyle" : 0,
+      "syntaxCheckerStyle" : 3,
       "transpilerStyle" : 0
     },
     "languageDefaultsJSON" : {
@@ -2593,15 +2384,15 @@
       "autoOutputPathReplace2" : "",
       "autoOutputPathStyle" : 0,
       "orderOutput" : 0,
-      "outputStyle" : 1
+      "outputStyle" : 0
     },
     "languageDefaultsKIT" : {
       "autoOutputAction" : 0,
       "autoOutputPathFilenamePattern" : "*.html",
       "autoOutputPathRelativePath" : "",
       "autoOutputPathReplace1" : "kit",
-      "autoOutputPathReplace2" : "html",
-      "autoOutputPathStyle" : 1,
+      "autoOutputPathReplace2" : "",
+      "autoOutputPathStyle" : 3,
       "htmlMinifierStyle" : 0,
       "shouldRunCacheBuster" : 0
     },
@@ -2620,10 +2411,10 @@
       "purgeCSSStyle" : 0,
       "rewriteURLStyle" : 0,
       "shouldRunAutoprefixer" : 1,
-      "shouldRunBless" : 1,
+      "shouldRunBless" : 0,
       "sourceMapStyle" : 0,
       "strictImports" : 0,
-      "strictUnits" : 0
+      "strictUnits" : 1
     },
     "languageDefaultsMARKDOWN" : {
       "autoOutputAction" : 1,
@@ -2637,7 +2428,7 @@
       "enableLabels" : 1,
       "enableSmartQuotes" : 1,
       "htmlMinifierStyle" : 0,
-      "maskEmailAddresses" : 1,
+      "maskEmailAddresses" : 0,
       "outputFormat" : 0,
       "outputStyle" : 0,
       "parseMetadata" : 1,
@@ -2659,12 +2450,12 @@
     "languageDefaultsPNG" : {
       "autoOutputAction" : 0,
       "autoOutputPathFilenamePattern" : "*.png",
-      "autoOutputPathRelativePath" : "",
+      "autoOutputPathRelativePath" : "assets",
       "autoOutputPathReplace1" : "",
       "autoOutputPathReplace2" : "",
-      "autoOutputPathStyle" : 0,
+      "autoOutputPathStyle" : 1,
       "optimizerType" : 1,
-      "quality" : 100,
+      "quality" : 80,
       "webpOptimizationPresetUUID" : "lpckwebp-none",
       "webpRGBQuality" : 75
     },
@@ -2677,7 +2468,7 @@
       "autoOutputPathStyle" : 0,
       "compileDebug" : 1,
       "htmlMinifierStyle" : 0,
-      "outputStyle" : 0,
+      "outputStyle" : 1,
       "shouldRunCacheBuster" : 0
     },
     "languageDefaultsSASS" : {
@@ -2686,15 +2477,15 @@
       "autoOutputPathRelativePath" : "..\/css",
       "autoOutputPathReplace1" : "sass",
       "autoOutputPathReplace2" : "css",
-      "autoOutputPathStyle" : 2,
-      "compilerType" : 1,
+      "autoOutputPathStyle" : 0,
+      "compilerType" : 0,
       "cssoStyle" : 0,
       "decimalPrecision" : 10,
       "emitCharset" : 1,
       "outputStyle" : 0,
       "purgeCSSStyle" : 0,
-      "shouldRunAutoprefixer" : 1,
-      "shouldRunBless" : 1,
+      "shouldRunAutoprefixer" : 0,
+      "shouldRunBless" : 0,
       "sourceMapStyle" : 0
     },
     "languageDefaultsSLIM" : {
@@ -2718,24 +2509,24 @@
       "autoOutputPathRelativePath" : "..\/css",
       "autoOutputPathReplace1" : "stylus",
       "autoOutputPathReplace2" : "css",
-      "autoOutputPathStyle" : 2,
+      "autoOutputPathStyle" : 0,
       "cssoStyle" : 0,
       "debugStyle" : 0,
       "importCSS" : 0,
       "outputStyle" : 0,
       "purgeCSSStyle" : 0,
       "resolveRelativeURLS" : 0,
-      "shouldRunAutoprefixer" : 1,
-      "shouldRunBless" : 1,
+      "shouldRunAutoprefixer" : 0,
+      "shouldRunBless" : 0,
       "sourceMapStyle" : 0
     },
     "languageDefaultsSVG" : {
       "autoOutputAction" : 2,
       "autoOutputPathFilenamePattern" : "*.svg",
-      "autoOutputPathRelativePath" : "",
+      "autoOutputPathRelativePath" : "assets",
       "autoOutputPathReplace1" : "",
       "autoOutputPathReplace2" : "",
-      "autoOutputPathStyle" : 0,
+      "autoOutputPathStyle" : 1,
       "pluginMask" : 52780316221407
     },
     "languageDefaultsTS" : {
@@ -2744,7 +2535,7 @@
       "autoOutputPathRelativePath" : "\/js",
       "autoOutputPathReplace1" : "",
       "autoOutputPathReplace2" : "",
-      "autoOutputPathStyle" : 2,
+      "autoOutputPathStyle" : 0,
       "createDeclarationFile" : 0,
       "jsxMode" : 0,
       "minifierStyle" : 0,
@@ -2756,13 +2547,24 @@
     },
     "languageDefaultsUserDefined" : [
       {
-        "autoOutputAction" : 0,
-        "autoOutputPathFilenamePattern" : "*.xslt",
+        "autoOutputAction" : 2,
+        "autoOutputPathFilenamePattern" : "*.woff",
         "autoOutputPathRelativePath" : "",
         "autoOutputPathReplace1" : "",
         "autoOutputPathReplace2" : "",
-        "autoOutputPathStyle" : 0,
-        "fileExtension" : "xslt",
+        "autoOutputPathStyle" : 1,
+        "fileExtension" : "woff",
+        "htmlMinifierStyle" : 0,
+        "shouldRunCacheBuster" : 0
+      },
+      {
+        "autoOutputAction" : 0,
+        "autoOutputPathFilenamePattern" : "*.woff2",
+        "autoOutputPathRelativePath" : "assets\/fonts",
+        "autoOutputPathReplace1" : "",
+        "autoOutputPathReplace2" : "",
+        "autoOutputPathStyle" : 1,
+        "fileExtension" : "woff2",
         "htmlMinifierStyle" : 0,
         "shouldRunCacheBuster" : 0
       }
@@ -2800,6 +2602,9 @@
       "removeVariables" : 0,
       "safelistEntries" : [
 
+      ],
+      "skippedEntries" : [
+        "node_modules\/**"
       ]
     },
     "rollupContext" : "",
@@ -2811,7 +2616,7 @@
       "ENVIRONMENT:::$NODE_ENV"
     ],
     "rollupTreeshakingEnabled" : 1,
-    "skippedFoldersString" : "_cache, cache, .idea, log, _logs, logs, node_modules, \/storage\/framework\/sessions, \/websiteicons, \/docs, \/test\/lib, \/test, \/src\/models",
+    "skippedFoldersString" : "\/storage\/framework\/sessions,node_modules,_logs,logs,log,.idea,_cache,cache,.nova",
     "sourceFolderName" : "src",
     "susyVersion" : 3,
     "tsAllowSyntheticDefaultImports" : 0,
@@ -2822,6 +2627,7 @@
     "tsEmitBOM" : 0,
     "tsEmitDecoratorMetadata" : 0,
     "tsESModuleInterop" : 0,
+    "tsExactOptionalPropertyTypes" : 0,
     "tsForceConsistentCasingInFileNames" : 0,
     "tsImportHelpers" : 0,
     "tsIsolatedModules" : 0,
@@ -2830,10 +2636,12 @@
     "tsNoEmitHelpers" : 0,
     "tsNoFallthroughCasesInSwitch" : 0,
     "tsNoImplicitAny" : 0,
+    "tsNoImplicitOverride" : 0,
     "tsNoImplicitReturns" : 0,
     "tsNoImplicitThis" : 0,
     "tsNoImplicitUseStrict" : 0,
     "tsNoLib" : 0,
+    "tsNoPropertyAccessFromIndexSignature" : 0,
     "tsNoResolve" : 0,
     "tsNoStrictGenericChecks" : 0,
     "tsNoUncheckedIndexAccess" : 0,
@@ -2849,6 +2657,7 @@
     "tsStripInternal" : 0,
     "tsSuppressExcessPropertyErrors" : 0,
     "tsSuppressImplicitAnyIndexErrors" : 0,
+    "tsUseUnknownInCatchVariables" : 0,
     "uglifyDefinesString" : "",
     "uglifyFlags2" : {
       "arguments" : {
