@@ -39,7 +39,7 @@
     }
     (function() {
       (function() {
-        var method, property, _i, _j, _len, _len1, _ref, _ref1;
+        var i, j, len, len1, method, property, ref, ref1;
       
         __out.push('(function() {\n\tvar _ = self.');
       
@@ -47,9 +47,9 @@
       
         __out.push(' = function() {\n\t\t// Properties');
       
-        _ref = this.properties;
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          property = _ref[_i];
+        ref = this.properties;
+        for (i = 0, len = ref.length; i < len; i++) {
+          property = ref[i];
           __out.push('\n\t\tthis.');
           __out.push(__sanitize(property.name));
           __out.push(' = ');
@@ -59,9 +59,9 @@
       
         __out.push('\n\t};\n\n\t_.prototype = {\n\t\t// Methods');
       
-        _ref1 = this.methods;
-        for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-          method = _ref1[_j];
+        ref1 = this.methods;
+        for (j = 0, len1 = ref1.length; j < len1; j++) {
+          method = ref1[j];
           __out.push('\n\t\t');
           __out.push(__sanitize(method.name));
           __out.push(': function() { }\n\t');

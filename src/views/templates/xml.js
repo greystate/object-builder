@@ -39,7 +39,7 @@
     }
     (function() {
       (function() {
-        var method, prop, _i, _j, _len, _len1, _ref, _ref1;
+        var i, j, len, len1, method, prop, ref, ref1;
       
         __out.push('<object id="');
       
@@ -51,9 +51,9 @@
       
         __out.push('</name>\n\t');
       
-        _ref = this.properties;
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          prop = _ref[_i];
+        ref = this.properties;
+        for (i = 0, len = ref.length; i < len; i++) {
+          prop = ref[i];
           __out.push('\n\t<property');
           if ((prop.type != null) && prop.type !== 'default') {
             __out.push(' type="');
@@ -67,9 +67,9 @@
       
         __out.push('\n\t');
       
-        _ref1 = this.methods;
-        for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-          method = _ref1[_j];
+        ref1 = this.methods;
+        for (j = 0, len1 = ref1.length; j < len1; j++) {
+          method = ref1[j];
           __out.push('\n\t<method>\n\t\t<name>');
           __out.push(__sanitize(method.name));
           __out.push('</name>\n\t</method>\n\t');
