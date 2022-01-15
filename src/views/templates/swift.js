@@ -41,7 +41,7 @@
       (function() {
         var i, j, len, len1, method, prop, ref, ref1;
       
-        __out.push('class ');
+        __out.push('struct ');
       
         __out.push(__sanitize(this.name));
       
@@ -54,7 +54,6 @@
           __out.push(__sanitize(prop.name));
           __out.push(': ');
           __out.push(__sanitize(this.nameForType(prop.type)));
-          __out.push('?');
         }
       
         __out.push('\n\n  // Methods');
@@ -64,7 +63,7 @@
           method = ref1[j];
           __out.push('\n  func ');
           __out.push(__sanitize(method.name));
-          __out.push('() -> Void {\n    // implementation\n  }\n');
+          __out.push('() {\n    // implementation\n  }\n');
         }
       
         __out.push('\n}\n');
