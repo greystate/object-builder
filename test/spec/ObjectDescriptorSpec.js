@@ -23,11 +23,12 @@ describe("ObjectDescriptor", function() {
 		})
 	})
 	
-	fdescribe("addProperty", function() {
+	describe("addProperty", function() {
 		it("adds a property to the ObjectDescriptor", function() {
 			this.od.addProperty("length")
 			expect(this.od.properties.length).toEqual(1)
 			expect(this.od.properties[0].name).toEqual("length")
+			expect(this.od.memberList['p$length']).toBe(true)
 		})
 		
 		it("sets the type to 'default' if none specified", function() {
