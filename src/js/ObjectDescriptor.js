@@ -14,10 +14,30 @@ class ObjectDescriptor {
 		}
 	}
 	
+	removeProperty(name) {
+		if (this.memberList[`p$${name}`]) {
+			const newProps = this.properties.filter(entry => entry.name != name)
+			if (newProps.length + 1 == this.properties.length) {
+				this.properties = newProps
+				this.memberList[`p$${name}`] = false
+			}
+		}
+	}
+	
 	addMethod(name) {
 		if (!this.memberList[`m$${name}`]) {
 			this.methods.push({ name })
 			this.memberList[`m$${name}`] = true
+		}
+	}
+	
+	removeMethod(name) {
+		if (this.memberList[`m$${name}`]) {
+			const newMeths = this.methods.filter(entry => entry.name != name)
+			if (newMeths.length + 1 == this.methods.length) {
+				this.methods = newMeths
+				this.memberList[`m$${name}`] = false
+			}
 		}
 	}
 }
