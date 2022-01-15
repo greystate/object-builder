@@ -1,3 +1,5 @@
+import ObjectDescriptor from '../../src/js/ObjectDescriptor.js'
+
 describe("ObjectDescriptor", () => {
 	beforeEach(() => {
 		this.od = new ObjectDescriptor()
