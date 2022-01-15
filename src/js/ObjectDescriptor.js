@@ -3,19 +3,19 @@ class ObjectDescriptor {
 		this.name = name
 		this.properties = []
 		this.methods = []
-		this.memberList = []
+		this.memberList = {}
 	}
 	
 	addProperty(nameSpec) {
 		const [ name, type ] = extractNameAndType(nameSpec)
-		if (!this.memberList.includes(`p$${name}`)) {
+		if (!this.memberList[`p$${name}`]) {
 			this.properties.push({ name, type })
 			this.memberList[`p$${name}`] = true
 		}
 	}
 	
 	addMethod(name) {
-		if (!this.memberList.includes(`m$${name}`)) {
+		if (!this.memberList[`m$${name}`]) {
 			this.methods.push({ name })
 			this.memberList[`m$${name}`] = true
 		}
