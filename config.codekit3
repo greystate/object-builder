@@ -410,6 +410,25 @@
       "oS" : 0,
       "tS" : 1
     },
+    "\/src\/index.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/index.html",
+      "oF" : 0
+    },
+    "\/src\/js\/ObjectDescriptor.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/ObjectDescriptor.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
     "\/src\/less\/app.less" : {
       "aP" : 1,
       "bl" : 1,
@@ -692,14 +711,6 @@
       "oAP" : "\/build\/models\/object.form.xml",
       "oF" : 0
     },
-    "\/src\/views\/index.kit" : {
-      "cB" : 0,
-      "ft" : 2048,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/build\/views\/index.html",
-      "oF" : 0
-    },
     "\/src\/views\/index\/_content.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -900,31 +911,42 @@
       "sC" : 0,
       "tS" : 0
     },
-    "\/test\/lib\/jasmine-3.5.0\/boot.js" : {
+    "\/test\/lib\/jasmine-3.10.1\/boot0.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 0,
       "oA" : 0,
-      "oAP" : "\/build\/assets\/boot.js",
+      "oAP" : "\/build\/assets\/boot0.js",
       "oF" : 0,
-      "sC" : 3,
+      "sC" : 0,
       "tS" : 0
     },
-    "\/test\/lib\/jasmine-3.5.0\/jasmine_favicon.png" : {
+    "\/test\/lib\/jasmine-3.10.1\/boot1.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/assets\/boot1.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
+    "\/test\/lib\/jasmine-3.10.1\/jasmine_favicon.png" : {
       "ft" : 32768,
       "iS" : 1486,
       "oA" : 0,
       "oAP" : "\/build\/assets\/jasmine_favicon.png",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 80,
       "rq" : 75
     },
-    "\/test\/lib\/jasmine-3.5.0\/jasmine-html.js" : {
+    "\/test\/lib\/jasmine-3.10.1\/jasmine-html.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
@@ -932,10 +954,10 @@
       "oA" : 0,
       "oAP" : "\/build\/assets\/jasmine-html.js",
       "oF" : 0,
-      "sC" : 3,
+      "sC" : 0,
       "tS" : 0
     },
-    "\/test\/lib\/jasmine-3.5.0\/jasmine.css" : {
+    "\/test\/lib\/jasmine-3.10.1\/jasmine.css" : {
       "aP" : 1,
       "bl" : 0,
       "ci" : 0,
@@ -947,7 +969,7 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/test\/lib\/jasmine-3.5.0\/jasmine.js" : {
+    "\/test\/lib\/jasmine-3.10.1\/jasmine.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
@@ -955,7 +977,7 @@
       "oA" : 0,
       "oAP" : "\/build\/assets\/jasmine.js",
       "oF" : 0,
-      "sC" : 3,
+      "sC" : 0,
       "tS" : 0
     },
     "\/test\/MIT.LICENSE" : {
@@ -974,7 +996,7 @@
       "oA" : 0,
       "oAP" : "\/build\/assets\/ObjectDescriptorSpec.js",
       "oF" : 0,
-      "sC" : 3,
+      "sC" : 0,
       "tS" : 0
     },
     "\/test\/SpecRunner.html" : {
@@ -1002,11 +1024,11 @@
   },
   "projectAttributes" : {
     "creationDate" : 597508393.61454594,
-    "displayValue" : "object-builder",
-    "displayValueWasSetByUser" : 0,
-    "iconImageName" : "brackets-verd",
-    "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 609628951.11925197
+    "displayValue" : "Object Builder [ReDuX]",
+    "displayValueWasSetByUser" : 1,
+    "iconImageName" : "\/app-screenshot.png",
+    "iconImageWasSetByUser" : 1,
+    "lastBuiltDate" : 663956777.13647294
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
@@ -1300,14 +1322,14 @@
     "bowerUseExactVersion" : 0,
     "browserRefreshDelay" : 0,
     "browserslistString" : ">0.2%, last 2 versions, Firefox ESR, not dead",
-    "buildEnvironment" : 0,
+    "buildEnvironment" : 1,
     "buildFolderActive" : 1,
     "buildFolderName" : "build",
     "cleanBuild" : 1,
     "cssoForceMediaMerge" : 0,
     "cssoRestructure" : 1,
     "environmentVariableEntries" : [
-      "NODE_ENV:::production"
+      "NODE_ENV:::development"
     ],
     "esLintConfigFileHandlingType" : 0,
     "esLintECMAVersion" : 7,
@@ -2373,7 +2395,7 @@
       "bundleFormat" : 0,
       "minifierStyle" : 0,
       "sourceMapStyle" : 0,
-      "syntaxCheckerStyle" : 3,
+      "syntaxCheckerStyle" : 0,
       "transpilerStyle" : 0
     },
     "languageDefaultsJSON" : {
