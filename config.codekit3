@@ -418,13 +418,112 @@
       "oAP" : "\/build\/index.html",
       "oF" : 0
     },
-    "\/src\/js\/ObjectDescriptor.js" : {
+    "\/src\/js\/languages\/coffee-script.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 0,
       "oA" : 1,
-      "oAP" : "\/build\/assets\/ObjectDescriptor.js",
+      "oAP" : "\/build\/assets\/coffee-script.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
+    "\/src\/js\/languages\/csharp.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/csharp.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
+    "\/src\/js\/languages\/diagram.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/diagram.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
+    "\/src\/js\/languages\/es6.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/es6.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
+    "\/src\/js\/languages\/language.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/language.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
+    "\/src\/js\/languages\/swift.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/swift.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
+    "\/src\/js\/languages\/xml.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/xml.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
+    "\/src\/js\/library.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/library.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
+    "\/src\/js\/object-builder.js" : {
+      "bF" : 3,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/assets\/object-builder.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/src\/js\/object-descriptor.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/object-descriptor.js",
       "oF" : 0,
       "sC" : 0,
       "tS" : 0
@@ -608,6 +707,17 @@
       "rwU" : 0,
       "sI" : 0,
       "sU" : 0
+    },
+    "\/src\/lib\/helpers\/helpers.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/helpers.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
     },
     "\/src\/lib\/libs.js" : {
       "bF" : 0,
