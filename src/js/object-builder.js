@@ -3,7 +3,10 @@ import Library from './library'
 import ObjectDescriptor from './object-descriptor'
 
 import Diagram from './languages/diagram'
+import CoffeeScript from './languages/coffee-script'
+import CSharp from './languages/csharp'
 import Swift from './languages/swift'
+import XML from './languages/xml'
 import ES6 from './languages/es6'
 
 const RETURN_KEY = 13
@@ -25,7 +28,10 @@ class ObjectBuilderController {
 	setupLanguages() {
 		this.languages = {}
 		this.addLanguage(Diagram)
+		this.addLanguage(CoffeeScript)
+		this.addLanguage(CSharp)
 		this.addLanguage(Swift)
+		this.addLanguage(XML)
 		this.addLanguage(ES6)
 	}
 	
