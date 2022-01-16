@@ -5,6 +5,7 @@
 // 
 //  `template` is the name of the eco template for rendering the language
 //  `prism` is the name of the [Prism](http://prismjs.com) language to use for syntax highlighting.
+
 class Language {
 	constructor(name, options = {}) {
 		this.name = name
@@ -15,7 +16,7 @@ class Language {
 
 	renderInterface(object) {
 		object.nameForType = function(type) { return this.types[type] || 'N/A' }
-		ecoTemplates[this.template](object)
+		return window.ecoTemplates[this.template](object)
 	}
 }
 
