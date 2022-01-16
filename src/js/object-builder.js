@@ -2,6 +2,7 @@ import { domSelect as $, domSelectAll as $$, getSelectedRadioValue as $val } fro
 import Library from './library'
 import ObjectDescriptor from './object-descriptor'
 
+import Diagram from './languages/diagram'
 import Swift from './languages/swift'
 import ES6 from './languages/es6'
 
@@ -23,6 +24,7 @@ class ObjectBuilderController {
 	
 	setupLanguages() {
 		this.languages = {}
+		this.addLanguage(Diagram)
 		this.addLanguage(Swift)
 		this.addLanguage(ES6)
 	}
