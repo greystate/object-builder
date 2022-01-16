@@ -46,6 +46,39 @@ class ObjectBuilderController {
 		}
 		$('.language').innerHTML += radios.join('\n')
 	}
+	
+	testObject() {
+		this.currentObject = new ObjectDescriptor('ObjectDescriptor')
+		
+		this.currentObject.addMethod('addMethod')
+		this.currentObject.addMethod('addProperty')
+		this.currentObject.addMethod('clone')
+		
+		this.currentObject.addProperty('memberlist{}')
+		this.currentObject.addProperty('methods[]')
+		this.currentObject.addProperty('properties[]')
+		this.changed()
+	}
+	
+	changed() {
+		const lang = $val('codelang')
+		this.renderObject(this.currentObject)
+		if (typeof lang !== 'undefined' && lang !== null) {
+			this.renderCode(this.currentObject, lang)
+			Prism.highlightAll()
+		}
+	}
+	
+	renderObject(object) {
+		const presenter = this.languages.Diagram
+		const code = presenter.renderInterface(object)
+		
+		let diagramWindow = $('.diagram')
+		diagramWindow.innerHTML = code
+		this.addControls()
+	}
+	
+	addControls() { }
 }
 
 window.app = window.app || { }
