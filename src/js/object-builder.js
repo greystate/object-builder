@@ -69,6 +69,15 @@ class ObjectBuilderController {
 		}
 	}
 	
+	renderCode(object, language) {
+		const presenter = this.languages[language]
+		const rendered = presenter.renderInterface(object)
+		
+		let codeWindow = $('.output code')
+		codeWindow.textContent = rendered
+		codeWindow.className = `language-${presenter.prism}`
+	}
+	
 	renderObject(object) {
 		const presenter = this.languages.Diagram
 		const code = presenter.renderInterface(object)
