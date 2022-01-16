@@ -5,7 +5,7 @@ function domSelect(selector) {
 
 function getSelectedRadioValue(fieldname) {
 	let i, len, radio
-	const elements = $(`[name='${fieldname}']`)
+	const elements = domSelect(`[name='${fieldname}']`)
 	for (i = 0, len = elements.length; i < len; i++) {
 		radio = elements[i]
 		if (radio.checked) {
