@@ -2,8 +2,8 @@ import { domSelect as $, domSelectAll as $$, getSelectedRadioValue as $val } fro
 import Library from './library'
 import ObjectDescriptor from './object-descriptor'
 
-import Swift from './swift'
-import ES6 from './es6'
+import Swift from './languages/swift'
+import ES6 from './languages/es6'
 
 const RETURN_KEY = 13
 const validRE = /^[^\s,\.()-]+$/
