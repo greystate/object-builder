@@ -8,14 +8,16 @@
 
 class Language {
 	constructor(name, options = {}) {
+		let ref
 		this.name = name
 		this.template = options.template || this.name.toLowerCase()
 		this.prism = options.prism || this.name.toLowerCase()
-		this.types = options.types || { 'default': 'string' }
+		this.types = (ref = options.types) != null ? ref : { default: 'string' }
 	}
 
 	renderInterface(object) {
-		object.nameForType = function(type) { return this.types[type] || 'N/A' }
+		let ref
+		object.nameForType = (type) => { (ref = this.types[type]) != null ? ref : 'N/A' }
 		return window.ecoTemplates[this.template](object)
 	}
 }
