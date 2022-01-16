@@ -1,4 +1,4 @@
-import ObjectDescriptor from '../../src/js/ObjectDescriptor.js'
+import ObjectDescriptor from '../../src/js/object-descriptor.js'
 
 describe("ObjectDescriptor", function() {
 	beforeEach(function() {
