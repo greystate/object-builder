@@ -4,9 +4,14 @@ function domSelect(selector) {
 }
 
 function getSelectedRadioValue(fieldname) {
+	let i, len, radio
 	const elements = $(`[name='${fieldname}']`)
-	const selected = Array.from(elements).filter(radio => radio.checked)
-	return selected.value
+	for (i = 0, len = elements.length; i < len; i++) {
+		radio = elements[i]
+		if (radio.checked) {
+			return radio.value
+		}
+	}
 }
 
 function domSelectAll(selector) {
