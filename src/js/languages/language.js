@@ -17,7 +17,7 @@ class Language {
 
 	renderInterface(object) {
 		let ref
-		object.nameForType = (type) => { (ref = this.types[type]) != null ? ref : 'N/A' }
+		object.nameForType = (type) => (ref = this.types[type]) != null ? ref : 'N/A'
 		return window.ecoTemplates[this.template](object)
 	}
 }
