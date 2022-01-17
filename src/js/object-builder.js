@@ -20,9 +20,8 @@ class ObjectBuilderController {
 		
 		this.library = new Library($('.library'), this.languages.Diagram)
 		this.addLanguagesToForm()
-		// this.assignHandlers()
-		// this.setFocusAndPickDefaultLanguage()
-		
+		this.assignHandlers()
+		this.setFocusAndPickDefaultLanguage()
 	}
 	
 	setupLanguages() {
@@ -51,6 +50,81 @@ class ObjectBuilderController {
 			}
 		}
 		$('.language').innerHTML += radios.join('\n')
+	}
+	
+	assignHandlers() {
+		// Assign change events
+		$('#name').addEventListener('change', this.setObjectName.bind(this), false)
+		$('#property').addEventListener('change', this.addProperty.bind(this), false)
+		$('#method').addEventListener('change', this.addMethod.bind(this), false)
+		
+		const radios = $('[name="codelang"]')
+		radios.forEach(radio => {
+			radio.addEventListener('change', () => this.changed(), false)
+		})
+		
+		$(".library").addEventListener('click', this.libraryClickHandler, false)
+		
+		// Assign keypress
+		$('#name').addEventListener('keypress', this.handleKeypress, false)
+		$('#property').addEventListener('keypress', this.handleKeypress, false)
+		$('#method').addEventListener('keypress', this.handleKeypress, false)
+		
+		// Hook up the Save button
+		$('#save').addEventListener('click', this.saveCurrentObjectToLibrary.bind(this), false)
+		
+		// Hook up a future "Remove" button
+		$('.diagram').addEventListener('click', this.diagramClickHandler.bind(this), false)
+		
+		// Light validation warning
+		const textfields = $('input[type="text"]')
+		textfields.forEach(textfield => {
+			textfield.addEventListener('keyup', this.validityChecker, false)
+		})
+	}
+	
+	setObjectName(event) {
+		const val = event.target.value
+		if (val == 'tester') {
+			return this.testObject()
+		}
+		this.currentObject.name = val
+		this.changed()
+	}
+	
+	addProperty(event) {
+		const val = event.target.value
+		this.currentObject.addProperty(val)
+		this.changed()
+	}
+	
+	addMethod(event) {
+		const val = event.target.value
+		this.currentObject.addMethod(val)
+		this.changed()
+	}
+	
+	removeProperty(name) {
+		this.currentObject.removeProperty(name)
+		this.changed()
+	}
+		
+	removeMethod(name) {
+		this.currentObject.removeMethod(name)
+		this.changed()
+	}
+		
+	reset() {
+		this.currentObject = new ObjectDescriptor()
+		this.changed()
+		this.resetForm()
+	}
+	
+	resetForm() {
+		$('#name').value = ''
+		$('#property').value = ''
+		$('#method').value = ''
+		$('#name').focus()
 	}
 	
 	testObject() {
@@ -93,7 +167,65 @@ class ObjectBuilderController {
 		this.addControls()
 	}
 	
-	addControls() { }
+	saveCurrentObjectToLibrary(event) {
+		event.preventDefault()
+		this.library.add(this.currentObject.clone())
+		this.reset()
+	}
+	
+	validityChecker(event) {
+		const field = event.target
+		if (field.value.length == 0) {
+			field.classList.remove('invalid')
+		} else {
+			const ok = validRE.test(field.value)
+			field.classList.toggle('invalid', !ok)
+		}
+	}
+	
+	diagramClickHandler(event) {
+		const target = event.target.closest('td')
+		let ref
+		if (target && target.dataset) {
+			const propName = (ref = target.dataset.propname) != null ? ref : null
+			const methName = (ref = target.dataset.methname) != null ? ref : null
+			if (propName) {
+				this.removeProperty(propName)
+			} else if (methName) {
+				this.removeMethod(methName)
+			}
+		}
+	}
+	
+	addControls() {
+		const memberRows = $$('.diagram td[data-propname], .diagram td[data-methname]')
+		memberRows.forEach(mem => {
+			let button = document.createElement('button')
+			button.type = 'button'
+			button.textContent = 'Remove'
+			mem.appendChild(button)
+		})
+	}
+	
+	handleKeypress(event) {
+		const input = event.target
+		const code = event.keyCode
+	
+		if (code == RETURN_KEY) {
+			if (input.id == 'name') {
+				$('#property').select()
+			} else {
+				input.select()
+			}
+		}
+	}
+	
+	setFocusAndPickDefaultLanguage() {
+		$('#codelang-1').checked = true
+		$('#name').focus()
+		$('#name').select()
+		this.changed()
+	}
 }
 
 window.app = window.app || { }
