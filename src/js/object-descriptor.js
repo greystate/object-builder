@@ -6,6 +6,22 @@ class ObjectDescriptor {
 		this.memberList = {}
 	}
 	
+	clone() {
+		let cloned = new ObjectDescriptor(this.name)
+		let p, prop, m, len, ref = this.methods
+		for (m = 0, len = ref.length; m < len; m++) {
+			cloned.addMethod(ref[m].name)
+		}
+		
+		ref = this.properties
+		for (p = 0, len = ref.length; p < len; p++) {
+			prop = ref[p]
+			cloned.addProperty(`${prop.name}:${prop.type}`)
+		}
+		
+		return cloned
+	}
+	
 	addProperty(nameSpec) {
 		const [ name, type ] = extractNameAndType(nameSpec)
 		if (!this.memberList[`p$${name}`]) {
