@@ -18,7 +18,7 @@ class ObjectBuilderController {
 		this.currentObject = new ObjectDescriptor()
 		this.setupLanguages()
 		
-		this.library = new Library($('.library'), this.languages)
+		this.library = new Library($('.library'), this.languages.Diagram)
 		this.addLanguagesToForm()
 		// this.assignHandlers()
 		// this.setFocusAndPickDefaultLanguage()
