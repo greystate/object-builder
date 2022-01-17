@@ -63,7 +63,7 @@ class ObjectBuilderController {
 			radio.addEventListener('change', () => this.changed(), false)
 		})
 		
-		$(".library").addEventListener('click', this.libraryClickHandler, false)
+		$(".library").addEventListener('click', this.libraryClickHandler.bind(this), false)
 		
 		// Assign keypress
 		$('#name').addEventListener('keypress', this.handleKeypress, false)
@@ -140,6 +140,11 @@ class ObjectBuilderController {
 		this.changed()
 	}
 	
+	loadObjectIntoCurrentObject(object) {
+		this.currentObject = object
+		this.changed()
+	}
+	
 	changed() {
 		const lang = $val('codelang')
 		this.renderObject(this.currentObject)
@@ -180,6 +185,16 @@ class ObjectBuilderController {
 		} else {
 			const ok = validRE.test(field.value)
 			field.classList.toggle('invalid', !ok)
+		}
+	}
+	
+	libraryClickHandler(event) {
+		const target = event.target
+		const container = target.closest('div')
+		
+		const index = container.dataset.libraryIndex
+		if (index >= 0) {
+			this.loadObjectIntoCurrentObject((this.library.get(index)).clone())
 		}
 	}
 	
