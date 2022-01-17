@@ -15,6 +15,12 @@ describe("ObjectDescriptor", function() {
 		expect(new ObjectDescriptor("Ufo").name).toEqual("Ufo")
 	})
 	
+	it("can be cloned", function() {
+		this.pointClone = this.point.clone()
+		
+		expect(this.pointClone).toEqual(this.point)
+	})
+	
 	describe("addMethod", function() {
 		it("adds a method to the ObjectDescriptor", function() {
 			this.od.addMethod("toString")
@@ -64,6 +70,5 @@ describe("ObjectDescriptor", function() {
 			expect(this.point.methods.length).toEqual(1)
 			expect(this.point.memberList["m$toString"]).toBe(false)
 		})
-	})
-	
+	})	
 })
