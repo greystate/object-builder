@@ -45,7 +45,7 @@ class ObjectBuilderController {
 		let radios = []
 		let language
 		for (let name in this.languages) {
-			if (name != "Diagram") {
+			if (name != 'Diagram') {
 				language = this.languages[name]
 				radios.push(`<p class="radiofield"><input type="radio" value="${name}" name="codelang" id="codelang-${++index}"><label for="codelang-${index}">${name}</label></p>`)
 			}
