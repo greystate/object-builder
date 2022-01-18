@@ -17,7 +17,7 @@ class ObjectBuilderController {
 	constructor() {
 		this.app = window.app || { }
 		this.currentObject = new ObjectDescriptor()
-		this.setupLanguages()
+		this.setupLanguages([ Diagram, CoffeeScript, JavaScript, CSharp, Swift, XML, ES6 ])
 		
 		this.library = new Library($('.library'), this.languages.Diagram)
 		this.addLanguagesToForm()
@@ -25,15 +25,9 @@ class ObjectBuilderController {
 		this.setFocusAndPickDefaultLanguage()
 	}
 	
-	setupLanguages() {
+	setupLanguages(listOfLanguages) {
 		this.languages = {}
-		this.addLanguage(Diagram)
-		this.addLanguage(CoffeeScript)
-		this.addLanguage(JavaScript)
-		this.addLanguage(CSharp)
-		this.addLanguage(Swift)
-		this.addLanguage(XML)
-		this.addLanguage(ES6)
+		listOfLanguages.forEach(language => { this.addLanguage(language) })
 	}
 	
 	addLanguage(language) {
