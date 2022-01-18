@@ -39,11 +39,11 @@
     }
     (function() {
       (function() {
-        var i, j, len, len1, method, prop, ref, ref1;
+        var i, j, len, len1, method, prop, ref, ref1, ref2;
       
         __out.push('<object id="');
       
-        __out.push(__sanitize(this.name.toLowerCase()));
+        __out.push(__sanitize((ref = this.name) != null ? ref.toLowerCase() : void 0));
       
         __out.push('" xmlns="http://xmlns.greystate.dk/2002/object-descriptor">\n\t<name>');
       
@@ -51,9 +51,9 @@
       
         __out.push('</name>\n\t');
       
-        ref = this.properties;
-        for (i = 0, len = ref.length; i < len; i++) {
-          prop = ref[i];
+        ref1 = this.properties;
+        for (i = 0, len = ref1.length; i < len; i++) {
+          prop = ref1[i];
           __out.push('\n\t<property');
           if ((prop.type != null) && prop.type !== 'default') {
             __out.push(' type="');
@@ -67,9 +67,9 @@
       
         __out.push('\n\t');
       
-        ref1 = this.methods;
-        for (j = 0, len1 = ref1.length; j < len1; j++) {
-          method = ref1[j];
+        ref2 = this.methods;
+        for (j = 0, len1 = ref2.length; j < len1; j++) {
+          method = ref2[j];
           __out.push('\n\t<method>\n\t\t<name>');
           __out.push(__sanitize(method.name));
           __out.push('</name>\n\t</method>\n\t');
