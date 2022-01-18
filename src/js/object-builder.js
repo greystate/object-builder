@@ -4,6 +4,7 @@ import ObjectDescriptor from './object-descriptor'
 
 import Diagram from './languages/diagram'
 import CoffeeScript from './languages/coffee-script'
+import JavaScript from './languages/javascript'
 import CSharp from './languages/csharp'
 import Swift from './languages/swift'
 import XML from './languages/xml'
@@ -28,6 +29,7 @@ class ObjectBuilderController {
 		this.languages = {}
 		this.addLanguage(Diagram)
 		this.addLanguage(CoffeeScript)
+		this.addLanguage(JavaScript)
 		this.addLanguage(CSharp)
 		this.addLanguage(Swift)
 		this.addLanguage(XML)
