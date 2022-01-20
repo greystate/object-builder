@@ -1,9 +1,14 @@
 .library {
 	border-top: 1px solid rgba(0, 0, 0, 0.2);
 	
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	
 	&::before {
 		.font-size(14);
 		
+		flex-basis: 100%;
 		content: "Library";
 		display: block;
 		padding: 0.5em 20px;
