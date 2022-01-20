@@ -39,32 +39,31 @@
     }
     (function() {
       (function() {
-        var method, prop, _i, _j, _len, _len1, _ref, _ref1;
+        var i, j, len, len1, method, prop, ref, ref1;
       
-        __out.push('class ');
+        __out.push('struct ');
       
         __out.push(__sanitize(this.name));
       
         __out.push(' {\n  init() {\n    // initialization\n  }\n\n  // Properties');
       
-        _ref = this.properties;
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          prop = _ref[_i];
+        ref = this.properties;
+        for (i = 0, len = ref.length; i < len; i++) {
+          prop = ref[i];
           __out.push('\n  var ');
           __out.push(__sanitize(prop.name));
           __out.push(': ');
           __out.push(__sanitize(this.nameForType(prop.type)));
-          __out.push('?');
         }
       
         __out.push('\n\n  // Methods');
       
-        _ref1 = this.methods;
-        for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-          method = _ref1[_j];
+        ref1 = this.methods;
+        for (j = 0, len1 = ref1.length; j < len1; j++) {
+          method = ref1[j];
           __out.push('\n  func ');
           __out.push(__sanitize(method.name));
-          __out.push('() -> Void {\n    // implementation\n  }\n');
+          __out.push('() {\n    // implementation\n  }\n');
         }
       
         __out.push('\n}\n');

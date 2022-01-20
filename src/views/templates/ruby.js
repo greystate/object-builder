@@ -1,6 +1,6 @@
 (function() {
   this.ecoTemplates || (this.ecoTemplates = {});
-  this.ecoTemplates["xml"] = function(__obj) {
+  this.ecoTemplates["ruby"] = function(__obj) {
     if (!__obj) __obj = {};
     var __out = [], __capture = function(callback) {
       var out = __out, result;
@@ -39,43 +39,34 @@
     }
     (function() {
       (function() {
-        var i, j, len, len1, method, prop, ref, ref1, ref2;
+        var i, j, len, len1, method, prop, ref, ref1;
       
-        __out.push('<object id="');
-      
-        __out.push(__sanitize((ref = this.name) != null ? ref.toLowerCase() : void 0));
-      
-        __out.push('" xmlns="http://xmlns.greystate.dk/2002/object-descriptor">\n\t<name>');
+        __out.push('class ');
       
         __out.push(__sanitize(this.name));
       
-        __out.push('</name>\n\t');
+        __out.push('\n');
       
-        ref1 = this.properties;
-        for (i = 0, len = ref1.length; i < len; i++) {
-          prop = ref1[i];
-          __out.push('\n\t<property');
-          if ((prop.type != null) && prop.type !== 'default') {
-            __out.push(' type="');
-            __out.push(this.nameForType(prop.type));
-            __out.push('"');
-          }
-          __out.push('>\n\t\t<name>');
+        ref = this.properties;
+        for (i = 0, len = ref.length; i < len; i++) {
+          prop = ref[i];
+          __out.push('\n\t@');
           __out.push(__sanitize(prop.name));
-          __out.push('</name>\n\t</property>\n\t');
+          __out.push(' = ');
+          __out.push(this.nameForType(prop.type));
         }
       
-        __out.push('\n\t');
+        __out.push('\n\t\n');
       
-        ref2 = this.methods;
-        for (j = 0, len1 = ref2.length; j < len1; j++) {
-          method = ref2[j];
-          __out.push('\n\t<method>\n\t\t<name>');
+        ref1 = this.methods;
+        for (j = 0, len1 = ref1.length; j < len1; j++) {
+          method = ref1[j];
+          __out.push('\n\tdef ');
           __out.push(__sanitize(method.name));
-          __out.push('</name>\n\t</method>\n\t');
+          __out.push('\n\t\t# implementation\n\tend\n');
         }
       
-        __out.push('\n</object>\n');
+        __out.push('\nend\n');
       
       }).call(this);
       

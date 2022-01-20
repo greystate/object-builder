@@ -1,13 +1,13 @@
-class <%= @name %> {
+struct <%= @name %> {
   init() {
     // initialization
   }
 
   // Properties<% for prop in @properties: %>
-  var <%= prop.name %>: <%= @nameForType prop.type %>?<% end %>
+  var <%= prop.name %>: <%= @nameForType prop.type %><% end %>
 
   // Methods<% for method in @methods: %>
-  func <%= method.name %>() -> Void {
+  func <%= method.name %>() {
     // implementation
   }
 <% end %>

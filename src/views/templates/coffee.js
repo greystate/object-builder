@@ -39,7 +39,7 @@
     }
     (function() {
       (function() {
-        var m, method, _i, _len, _ref;
+        var i, len, m, method, ref;
       
         __out.push('class ');
       
@@ -48,22 +48,21 @@
         __out.push('\n  constructor: (');
       
         __out.push(__sanitize("" + (((function() {
-          var _i, _len, _ref, _results;
-      
-          _ref = this.properties;
-          _results = [];
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            m = _ref[_i];
-            _results.push('@' + m.name);
+          var i, len, ref, results;
+          ref = this.properties;
+          results = [];
+          for (i = 0, len = ref.length; i < len; i++) {
+            m = ref[i];
+            results.push('@' + m.name);
           }
-          return _results;
+          return results;
         }).call(this)).join(', '))));
       
         __out.push(') ->\n');
       
-        _ref = this.methods;
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          method = _ref[_i];
+        ref = this.methods;
+        for (i = 0, len = ref.length; i < len; i++) {
+          method = ref[i];
           __out.push('\n  ');
           __out.push(__sanitize(method.name));
           __out.push(': () ->\n    # implementation\n');

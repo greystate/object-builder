@@ -1,0 +1,10 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "eco src\/views\/templates\/*.eco"
+    }
+  },
+  "identifier" : "65A4B1C5-74A5-4614-AB13-C2D254D5CF32",
+  "openLogOnRun" : "finish"
+}

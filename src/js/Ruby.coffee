@@ -1,14 +1,14 @@
-class ES6 extends Language
+class Ruby extends Language
 	constructor: () ->
-		super "ES6",
-			prism: "javascript"
+		super "Ruby",
+			prism: "ruby"
 			types:
 				default: '""'
-				boolean: 'null'
+				boolean: 'false'
 				string: '""'
 				integer: '0'
 				double: '0.0'
 				array: '[ ]'
 				dictionary: '{ }'
 
-new ES6
+new Ruby

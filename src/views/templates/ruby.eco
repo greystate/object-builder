@@ -1,0 +1,10 @@
+class <%= @name %>
+<% for prop in @properties: %>
+	@<%= prop.name %> = <%- @nameForType prop.type %><% end %>
+	
+<% for method in @methods: %>
+	def <%= method.name %>
+		# implementation
+	end
+<% end %>
+end
