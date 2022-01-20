@@ -7,6 +7,7 @@ import CoffeeScript from './languages/coffee-script'
 import JavaScript from './languages/javascript'
 import CSharp from './languages/csharp'
 import Swift from './languages/swift'
+import Ruby from './languages/ruby'
 import XML from './languages/xml'
 import ES6 from './languages/es6'
 
@@ -17,7 +18,7 @@ class ObjectBuilderController {
 	constructor() {
 		this.app = window.app || { }
 		this.currentObject = new ObjectDescriptor()
-		this.setupLanguages([ Diagram, CoffeeScript, JavaScript, CSharp, Swift, XML, ES6 ])
+		this.setupLanguages([ Diagram, CoffeeScript, JavaScript, CSharp, Swift, Ruby, XML, ES6 ])
 		
 		this.library = new Library($('.library'), this.languages.Diagram)
 		this.addLanguagesToForm()

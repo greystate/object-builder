@@ -364,6 +364,17 @@
       "sC" : 0,
       "tS" : 0
     },
+    "\/src\/js\/languages\/ruby.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/ruby.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
     "\/src\/js\/languages\/swift.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -418,6 +429,16 @@
       "oF" : 0,
       "sC" : 0,
       "tS" : 0
+    },
+    "\/src\/js\/Ruby.coffee" : {
+      "ft" : 32,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/assets\/Ruby.js",
+      "oF" : 0,
+      "oS" : 0,
+      "tS" : 1
     },
     "\/src\/less\/app.less" : {
       "aP" : 1,
@@ -859,6 +880,25 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/build\/assets\/javascript.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
+    "\/src\/views\/templates\/ruby.eco" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/views\/templates\/ruby.eco",
+      "oF" : 0
+    },
+    "\/src\/views\/templates\/ruby.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/ruby.js",
       "oF" : 0,
       "sC" : 0,
       "tS" : 0
