@@ -239,5 +239,5 @@ class ObjectBuilderController {
 	}
 }
 
-window.app = window.app || { }
-window.app.controller = new ObjectBuilderController()
+let app = window.app || { }
+app.controller = new ObjectBuilderController()
